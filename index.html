@@ -5,44 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,800;1,500&display=swap" rel="stylesheet">
     <title>GonzRodriguez Portfolio Website</title>
 </head>
 <body>
-    <div class="nav__menu">
-        <div class="nav__layout">
-            <div class="nav__bg" onclick="hamburguerToggle()"></div>
-            <ul class="nav__list" onclick="hamburguerToggle()">
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#services" class="nav__link">My services</a></li>
-                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
+    <div class="circle"></div>
+    <div class="drawer__menu">
+        <div class="drawer__layout">
+            <div class="drawer__bg" onclick="hamburguerToggle()"></div>
+            <ul class="drawer__list" onclick="hamburguerToggle()">
+                <li class="drawer__item"><a href="#home" class="drawer__link">Home</a></li>
+                <li class="drawer__item"><a href="#services" class="drawer__link">My services</a></li>
+                <li class="drawer__item"><a href="#projects" class="drawer__link">Projects</a></li>
+                <li class="drawer__item"><a href="#about" class="drawer__link">About</a></li>
+                <li class="drawer__item"><a href="#footer" class="drawer__link">Contact</a></li>
             </ul>
         </div>
     </div>
     <header class="header">
-        <div class="hamburguer" >
+        <div class="hamburguer"  >
             <div class="hamburguer__stripe hamburguer__stripe__top"></div>
             <div class="hamburguer__stripe hamburguer__stripe__middle"></div>
             <div class="hamburguer__stripe hamburguer__stripe__bottom"></div>
         </div>
     </header>
     <section class="hero" id="home">
-        <h1 class="hero__profile-title">Hi, I'm <strong>Gonzalo Rodríguez</strong></h1>
-        <h3 class="hero__profile-subtitle"><em>Junior Web Developer</em></h3>
+        <div class="hero__bg"></div>
+        <div class="hero__img">
+            <img src="./public//image2222 - copia - copia.jpg" alt="picture profile">
+        </div>
+        <div class="hero__text">
+            <h1 class="hero__title">Hello there, My name is </h1><span class="hero__name">Gonzalo Rodríguez</span>
+            <h3 class="hero__subtitle"><em>Junior Web Developer</em></h3>
+        </div>
     </section>
     <section class="about" id="about">
-        <div class="about__container">
-            <img class="about__image">
-            <div class="about__description">
+        <div class="about__polygon"> </div>
+        <div class="about__description">
                 <h2 class="about__title">About Me</h2>
-                <p class="about__p"></p>
-            </div>
+                <p class="about__p">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
+                C/O https://placeholder.com/text/lorem-ipsum/</p>
+                <img class="about__image">
         </div>
     </section>
     <section class="services" id="services">
             <ul class="services__group">
+                <h2 class="about__title">My Services</h2>
                 <li class="services__item">
                     <h3></h3>
                     <p></p>
@@ -51,6 +65,7 @@
     </section>
     <section class="projects" id="projects">
         <div class="projects">
+            <h2 class="about__title">My Projects</h2>
             <ul class="projects-group">
                 <li class="projects_item"></li>
                 <li class="projects_item"></li>

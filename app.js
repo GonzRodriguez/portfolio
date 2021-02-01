@@ -5,14 +5,41 @@
 // });
 
 const hamburguer = document.querySelector(".hamburguer");
-const navMenuBg = document.querySelector(".nav__bg");
-const navList = document.querySelector(".nav__list");
+const drawerMenuBg = document.querySelector(".drawer__bg");
+const drawerList = document.querySelector(".drawer__list");
+const drawerMenu = document.querySelector(".drawer__menu");
+
 
 function hamburguerToggle(){
     hamburguer.classList.toggle("on");
-    navList.classList.toggle("open");
-    navMenuBg.classList.toggle("open");
+    drawerList.classList.toggle("open");
+    drawerMenuBg.classList.toggle("open");
+    drawerMenu.classList.toggle("open")
+    console.log(hamburguer.classList.value.includes("on"));
+    handleOnScrollClass();
+
 }
 hamburguer.addEventListener("click", () => {
     hamburguerToggle()
+
+})
+
+function handleOnScrollClass() {
+    if (hamburguer.classList.value.includes("on")) {
+        hamburguer.classList.remove("onScroll")
+    }
+
+    if (window.scrollY > 0 ) {
+        if ( !hamburguer.classList.value.includes("on")) {
+        hamburguer.classList.add("onScroll")
+        }
+    }
+    if (window.scrollY == 0) {
+        hamburguer.classList.remove("onScroll")
+    }
+    }
+
+
+window.addEventListener("scroll", () => {
+    handleOnScrollClass();
 })
