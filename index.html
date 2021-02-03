@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,800;1,500&display=swap" rel="stylesheet">
     <title>GonzRodriguez Portfolio Website</title>
 </head>
 <body>
-    <div class="circle"></div>
     <div class="drawer__menu">
         <div class="drawer__layout">
             <div class="drawer__bg" onclick="hamburguerToggle()"></div>
             <ul class="drawer__list" onclick="hamburguerToggle()">
                 <li class="drawer__item"><a href="#home" class="drawer__link">Home</a></li>
                 <li class="drawer__item"><a href="#services" class="drawer__link">My services</a></li>
-                <li class="drawer__item"><a href="#projects" class="drawer__link">Projects</a></li>
+                <li class="drawer__item"><a href="#myWork" class="drawer__link">myWork</a></li>
                 <li class="drawer__item"><a href="#about" class="drawer__link">About</a></li>
                 <li class="drawer__item"><a href="#footer" class="drawer__link">Contact</a></li>
             </ul>
@@ -32,17 +31,18 @@
         </div>
     </header>
     <section class="hero" id="home">
-        <div class="hero__bg"></div>
+        <div class="circle"></div>
+        <div class="hero__polygonLeft"> </div>
+        <div class="hero__polygonRight"></div>
         <div class="hero__img">
             <img src="./public//image2222 - copia - copia.jpg" alt="picture profile">
         </div>
         <div class="hero__text">
-            <h1 class="hero__title">Hello there, My name is </h1><span class="hero__name">Gonzalo Rodríguez</span>
+            <h1 class="hero__title">Hello there, My name is </h1> <span class="hero__name">Gonzalo Rodríguez</span>
             <h3 class="hero__subtitle"><em>Junior Web Developer</em></h3>
         </div>
     </section>
     <section class="about" id="about">
-        <div class="about__polygon"> </div>
         <div class="about__description">
                 <h2 class="about__title">About Me</h2>
                 <p class="about__p">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -55,38 +55,40 @@
         </div>
     </section>
     <section class="services" id="services">
+        <div class="services__greenBlock">
             <ul class="services__group">
-                <h2 class="about__title">My Services</h2>
                 <li class="services__item">
                     <h3></h3>
                     <p></p>
                 </li>
             </ul>
+        </div>
     </section>
-    <section class="projects" id="projects">
-        <div class="projects">
-            <h2 class="about__title">My Projects</h2>
-            <ul class="projects-group">
-                <li class="projects_item"></li>
-                <li class="projects_item"></li>
-                <li class="projects_item"></li>
-                <li class="projects_item"></li>
-            </ul>
+    <section class="myWork" id="myWork">
+            <div class="myWork__container">
+                <div class="myWork__group">
+                    <div class="myWork__item">e</div>
+                    <div class="myWork__item">e</div>
+                    <div class="myWork__item"></div>
+                    <div class="myWork__item">e</div>
+                    <div class="myWork__item">e</div>
+                </div>
+            </div>
         </div>
     </section>
     <footer class="footer" id="footer">
-            <a href="mailto:grgsalamanca@gmail.com" class="footer__link">grgsalamanca@gmail.com</a>
-            <ul class="social_group">
-                <li class="social__item">
-                    <a href="" class="social__item-icon">Github</a>
+            <ul class="footer__group">
+                <li class="footer__item">
+                    <a href="" class="footer__item-icon"><i class="fab fa-github"></i></a>
                 </li>
-                <li class="social__item">
-                    <a href="" class="social__item-icon">linkedIn</a>
+                <li class="footer__item">
+                    <a href="" class="footer__item-icon"><i class="fab fa-linkedin-in"></i></a>
                 </li>
-                <li class="social__item">
-                    <a href="" class="social__item-icon">instagram</a>
+                <li class="footer__item">
+                    <a href="" class="footer__item-icon"><i class="fab fa-instagram" size="5"></i></a>
                 </li>
             </ul>
+            <h4><a href="mailto:grgsalamanca@gmail.com" class="footer__email">grgsalamanca@gmail.com</a></h4>
     </footer>
 
 <script src="app.js"></script>

@@ -8,6 +8,7 @@ const hamburguer = document.querySelector(".hamburguer");
 const drawerMenuBg = document.querySelector(".drawer__bg");
 const drawerList = document.querySelector(".drawer__list");
 const drawerMenu = document.querySelector(".drawer__menu");
+const servicesOnScreen = document.querySelector(".services__greenBlock");
 
 
 function hamburguerToggle(){
@@ -15,8 +16,7 @@ function hamburguerToggle(){
     drawerList.classList.toggle("open");
     drawerMenuBg.classList.toggle("open");
     drawerMenu.classList.toggle("open")
-    console.log(hamburguer.classList.value.includes("on"));
-    handleOnScrollClass();
+    handleFloatMenuClass();
 
 }
 hamburguer.addEventListener("click", () => {
@@ -24,22 +24,38 @@ hamburguer.addEventListener("click", () => {
 
 })
 
-function handleOnScrollClass() {
+function handleFloatMenuClass() {
     if (hamburguer.classList.value.includes("on")) {
-        hamburguer.classList.remove("onScroll")
+        hamburguer.classList.remove("floatMenu")
     }
 
     if (window.scrollY > 0 ) {
         if ( !hamburguer.classList.value.includes("on")) {
-        hamburguer.classList.add("onScroll")
+        hamburguer.classList.add("floatMenu")
         }
     }
     if (window.scrollY == 0) {
-        hamburguer.classList.remove("onScroll")
+        hamburguer.classList.remove("floatMenu")
     }
     }
 
 
 window.addEventListener("scroll", () => {
-    handleOnScrollClass();
+    handleFloatMenuClass();
+    handleGreenBoxAnimation()
+
 })
+
+function handleGreenBoxAnimation() {
+
+    
+    if (window.pageYOffset >= 550) {
+        servicesOnScreen.classList.add("onScreen");
+        console.log(true);
+    }
+    if (window.pageYOffset <= 550) {
+        servicesOnScreen.classList.remove("onScreen");
+        console.log(false);
+    }
+
+}
