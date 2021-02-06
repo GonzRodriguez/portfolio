@@ -8,10 +8,8 @@ const hamburguer = document.querySelector(".hamburguer");
 const drawerMenuBg = document.querySelector(".drawer__bg");
 const drawerList = document.querySelector(".drawer__list");
 const drawerMenu = document.querySelector(".drawer__menu");
-const myWorkCollapseIcon = document.querySelectorAll(".collapse");
 const servicesOnScreen = document.querySelector(".services__greenBlock");
-
-console.log(myWorkCollapseIcon);
+const myWorkItems = document.querySelectorAll(".myWork__item");
 
 
 function hamburguerToggle(){
@@ -60,9 +58,37 @@ function handleGreenBoxAnimation() {
     }
 
 }
-
-myWorkCollapseIcon.forEach(icon => {
-    icon.addEventListener("click", () => {
-        icon.parentElement.parentElement.querySelector(".myWork__item__description").classList.toggle("open")
+myWorkItems.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        item.querySelector(".myWork__item__description").classList.add("open")
+        item.querySelector(".divider").classList.remove("hidden")
+    })
+    item.addEventListener("mouseleave", () => {
+        item.querySelector(".myWork__item__description").classList.remove("open")
+        item.querySelector(".divider").classList.add("hidden")
     })
 });
+
+
+
+function inViewport(element) {
+
+    const bb = element.getBoundingClientRect();
+    return !(bb.top > innerHeight || bb.bottom < 0);    
+}
+
+document.addEventListener('scroll', event => {
+
+    myWorkItems.forEach(item => {
+
+        if (inViewport(item)) {
+                item.classList.add("onViewport")
+
+        } else {
+
+            item.classList.remove("onViewport")
+        
+    }
+    });
+
+})
