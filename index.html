@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,800;1,500&display=swap" rel="stylesheet">
     <title>GonzRodriguez Portfolio Website</title>
 </head>
@@ -40,7 +40,34 @@
             <span class="hero__name">Gonzalo Rodríguez</span>
             <h3 class="hero__subtitle"><em>Junior Web Developer</em></h3>
         </div>
-        
+            <div class="hero__white__square">
+                <ul class="hero__white__square__group">
+                    <li class="hero__white__square__item">
+                        <i class="fab fa-css3-alt"></i>
+                        <h4>CSS3</h4>
+                    </li>
+                    <li class="hero__white__square__item">
+                        <i class="fab fa-html5"></i>
+                        <h4>HTML5</h4>
+                    </li>
+                    <li class="hero__white__square__item">
+                        <i class="fab fa-js"></i>
+                        <h4>Javascript</h4>
+                    </li>
+                    <li class="hero__white__square__item">
+                        <i class="fab fa-node-js"></i>
+                        <h4>Nodejs</h4>
+                    </li>
+                    <li class="hero__white__square__item">
+                        <i class="fas fa-database"></i>
+                        <h4>MongoDB</h4>
+                    </li>
+                    <li class="hero__white__square__item">
+                        <i class="fab fa-react"></i>
+                        <h4>Reactjs</h4>
+                    </li>
+                </ul>
+            </div>
     </section>
     <section class="about" id="about">
         <div class="about__description">
@@ -54,58 +81,90 @@
                 <img class="about__image">
         </div>
     </section>
-    <section class="services" id="services">
-        <div class="services__greenBlock">
-            <ul class="services__group">
-                <li class="services__item">
-                    <i class="fab fa-css3-alt"></i>
-                    <h4>CSS3</h4>
-                </li>
-                <li class="services__item">
-                    <i class="fab fa-html5"></i>
-                    <h4>HTML5</h4>
-                </li>
-                <li class="services__item">
-                    <i class="fab fa-js"></i>
-                    <h4>Javascript</h4>
-                </li>
-                <li class="services__item">
-                    <i class="fab fa-node-js"></i>
-                    <h4>Nodejs</h4>
-                </li>
-                <li class="services__item">
-                    <i class="fas fa-database"></i>
-                    <h4>MongoDB</h4>
-                </li>
-                <li class="services__item">
-                    <i class="fab fa-react"></i>
-                    <h4>Reactjs</h4>
-                </li>
-            </ul>
+    <!-- <section class="services" id="services">
+
         </div>
-    </section>
+    </section> -->
     <section class="myWork" id="myWork">
             <div class="myWork__container">
                 <h2>My Work</h2>
                 <div class="myWork__group">
-                    <div class="myWork__item">
-                        <img src="./public/enterium.png">
+                    <div class="myWork__item" style="background-color: var(--clr-pri); ">
                         <h5>Enterium </h5>
-                        <div class="divider hidden"></div>
-                        <h6  class="myWork__item__description">Blog inspired in medium with authentication users, and mongo</h6>
+                        <img src="./public/enterium.png">
+                        <!-- <div class="divider hidden"></div> -->
+                        <div class="myWork__item__description">
+                            <h6> Blog inspired in medium with authentication users, and mongo </h6>
+                            <button class="myWork__item__description__open-button">MORE</button>
+                        </div>
+                        <ul class="myWork__item__more-info__group hidden">
+                            <div class="divider"></div>
+                            <li class="myWork__item__more-info__item">
+                                <img src="public/enterium-create-post.png" alt="compose">
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi facilis non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.</h6>
+                            </li>
+                            <div class="divider"></div>
+                            <li class="myWork__item__more-info__item right">
+                                <img src="public/enterium-profile.png" alt="profile">
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi facilis
+                                    non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.</h6>
+
+                            </li>
+                        </ul>
+                        <div class="myWork__item__buttons">
+                            <a href="https://github.com/GonzRodriguez/blog-project" target="_blank" class="myWork__item__code__button">SEE THE CODE</a>
+                        </div>
                     </div>
-                    <div class="myWork__item">
-                        <img src="./public/eaab2a0c8de4baf6d362f8df47e66011.png">
-                        <h5>Kepper app </h5>
-                        <div class="divider hidden"></div>
-                        <h6 class="myWork__item__description">Blog inspired in medium with authentication users, and mongo</h6>
+                    <div class="myWork__item" style="background-color: white; color: black;">
+                        <h5>Reactive notes </h5>
+                        <img src="./public/keeper.png">
+                        <!-- <div class="divider hidden"></div> -->
+                        <div class="myWork__item__description">
+                            <h6> Blog inspired in medium with authentication users, and mongo </h6>
+                        </div>
+                        <div class="myWork__item__buttons">
+                            <a href="https://github.com/GonzRodriguez/Reactive-notes" target="_blank" class="myWork__item__code__button" >SEE THE CODE</a>
+                        </div>
                     </div>
-                    <div class="myWork__item">
-                        <img src="./public/9904f82c315e8ef7d8a3e136cb8d9bb4.png">
+                    <div class="myWork__item" style="background-color: azure; color: black;">
                         <h5>Drum kit</h5>
-                        <div class="divider hidden"></div>
-                        <h6 class="myWork__item__description">Blog inspired in medium with authentication users, and mongo</h6>
+                        <img src="./public/drum.png">
+                            <div class="myWork__item__description">
+                                <h6>Simple web app using CSS, HTML and Javascript only, made througth the bootcamp course</h6>
+                            </div>
+                        <div class="myWork__item__buttons">
+                            <a href="https://github.com/GonzRodriguez/Drums_soundboard" target="_blank" class="myWork__item__code__button">SEE THE CODE</a>
+                        </div>
                     </div>
+                        <div class="myWork__item" style="background-color: var(--clr-pri-light); color: white;">
+                            <h5>This Portfolio</h5>
+                            <img src="./public/portfolio.png">
+                            <!-- <div class="divider hidden"></div> -->
+                            <div class="myWork__item__description">
+                                <h6> Blog inspired in medium with authentication users, and mongo </h6>
+                                <button class="myWork__item__description__open-button">MORE</button>
+                            </div>
+                                <ul class="myWork__item__more-info__group hidden">
+                                    <div class="divider"></div>
+                                    <li class="myWork__item__more-info__item">
+                                        <img src="public/enterium-create-post.png" alt="compose">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi
+                                            facilis non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.
+                                        </h6>
+                                    </li>
+                                    <div class="divider"></div>
+                                    <li class="myWork__item__more-info__item right">
+                                        <img src="public/enterium-profile.png" alt="profile">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi
+                                            facilis
+                                            non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.</h6>
+                                    </li>
+                                </ul>
+
+                            <div class="myWork__item__buttons">
+                                <a href="https://github.com/GonzRodriguez/portfolio" target="_blank" class="myWork__item__code__button">SEE THE CODE</a>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
