@@ -10,6 +10,7 @@ const drawerList = document.querySelector(".drawer__list");
 const drawerMenu = document.querySelector(".drawer__menu");
 const servicesOnScreen = document.querySelector(".services__greenBlock");
 const myWorkItems = document.querySelectorAll(".myWork__item");
+const myWorkGroup = document.querySelector(".myWork__group");
 const openDescriptionButtons = document.querySelectorAll(".myWork__item__description__open-button");
 const closeDescriptionButtons = document.querySelectorAll(".myWork__item__description__close-button");
 
@@ -25,31 +26,11 @@ function hamburguerToggle(){
     }
     window.scrollY == 0 && hamburguer.classList.remove("floatMenu") 
     
-    // handleFloatMenuClass();
 }
 hamburguer.addEventListener("click", () => {
     hamburguerToggle()
 
 })
-
-// function addCloseButton(item, button) {
-//     const crossStripe1 = document.createElement("div");
-//     const crossStripe2 = document.createElement("div");
-//     crossStripe1.style = " transform: rotate( 45deg )";
-//     crossStripe2.style = " transform: rotate( 135deg )";
-//     item.appendChild(crossStripe1)
-//     item.appendChild(crossStripe2)
-
-//     crossStripe1.addEventListener("click", () => {
-//         button.classList.toggle("hidden");
-//         item.classList.toggle("open");
-//     })
-//     crossStripe2.addEventListener("click", () => {
-//         button.classList.toggle("hidden");
-//         item.classList.toggle("open");
-//     })
-
-// }
 
 openDescriptionButtons.forEach(button => {
     const item = button.parentElement.parentElement
@@ -59,25 +40,19 @@ openDescriptionButtons.forEach(button => {
     crossStripe2.style = " transform: rotate( 135deg )";
  
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
         button.classList.toggle("hidden");
         item.classList.toggle("open");
         item.querySelector("ul").classList.toggle("hidden");
-
         crossStripe1.classList.add("myWork__item__close-button");
         crossStripe2.classList.add("myWork__item__close-button");
 
         item.appendChild(crossStripe1)
         item.appendChild(crossStripe2)
 
-
-
-        setTimeout(() => {
-            item.scrollIntoView();
-            
-        }, 100);
-
+        // myWorkGroup.scrollIntoView();
     })
+
     crossStripe1.addEventListener("click", () => {
         button.classList.toggle("hidden");
         item.classList.toggle("open");
@@ -86,6 +61,7 @@ openDescriptionButtons.forEach(button => {
         crossStripe2.classList.remove("myWork__item__close-button");
 
     })
+
     crossStripe2.addEventListener("click", () => {
         button.classList.toggle("hidden");
         item.classList.toggle("open");
