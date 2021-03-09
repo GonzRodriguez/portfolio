@@ -91,7 +91,7 @@ h1 {
 }
 h2 {
     font-size: var(--fs-h2);
-    font-weight: var(--fw-reg);
+    font-weight: var(--fw-bold);
 }
 h3 {
     /* font-size: var(--fs-h3); */
@@ -154,12 +154,33 @@ header img{
 .hidden {
     visibility: hidden;
 }
-
+.close__button__Element {
+    background-color: inherit;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 30px;
+    left: 30px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.close__button__stripe {
+    background-color: inherit;
+    filter: invert();
+    color: inherit;
+    position: absolute;
+    border: 0;
+    padding: 0;
+    height: 4px;
+    width: 30px;
+}
 /* --------- HAMBURGUER MENU --------- */
 
 .hamburguer {
     cursor: pointer;
-    z-index: 4;
+    z-index: 5;
     height: 50px;
     width: 50px;
     margin: 20px;
@@ -211,7 +232,7 @@ header img{
 .drawer__menu{
     font-size: var(--fs-h2);
     position: fixed;
-    z-index: 4;
+    z-index: 5;
     margin: 0;
     visibility: hidden;
     display: flex;
@@ -250,6 +271,7 @@ header img{
     position: absolute;
     display: block;
     height: 100%;
+    padding-left: 4rem;
     width: 75vw;
     visibility: hidden;
     top: 0;
@@ -316,7 +338,6 @@ header img{
 @media screen and (min-width: 450px) {
     .hero__img {
         height: 14rem;
-        width: 14rem;
 
     }
     .hero__text {
@@ -348,7 +369,6 @@ header img{
 @media screen and (min-width: 845px)  { 
      .hero__img {
         height: 18rem;
-        width: 18rem;
     }
     .hero {
         height: 100vh;
@@ -375,7 +395,6 @@ header img{
 @media screen and (min-width: 1000px)  {
     .hero__img {
         height: 25rem;
-        width: 25rem;
     }
     .hero {
         height: 100vh;
@@ -458,9 +477,13 @@ header img{
     z-index: 2;
     position: absolute;
     overflow: hidden;
+    background-color: var(--clr-sec-dark);
+    /* bottom: 0; */
+    height: 70vh;
+    /* width: 70vh; */
     border-radius:50%;
-    box-shadow: 0px 0px 25px #000000;
     margin: 7vh;
+    /* box-shadow: 0px 0px 25px #000000; */
 
 }
 .hero__img img{
@@ -587,7 +610,7 @@ header img{
     display: flex;
     align-items: center;
     background-color: white;
-    color: black;
+    color: var(--bg-med);
     height: fit-content;
     height: -moz-fit-content;
     flex-direction: column;
@@ -609,7 +632,7 @@ header img{
 
 .about__description__image{
     flex: 1;
-    margin: 1rem 0;
+    margin: auto;
     min-width: 200px;
     max-width: 20vw;
     border-radius: 3px;
@@ -632,7 +655,7 @@ header img{
 
 .about__icons__square__item {
     text-align: center;
-    color: var(--clr-sec-dark);
+    color: var(--bg-med);
     margin: 1rem;
     flex-basis: 5%;        
 }
@@ -688,26 +711,17 @@ header img{
         flex: 0 0 100%;
         min-width: fit-content;
         flex-direction: column;
-        padding: 5rem;
-
+        padding: 4rem;
+        flex-wrap: nowrap;
 } 
     .myWork__item__description {
         padding: 0;
         margin-top: 1rem;
     }
-    .myWork__item.open {
-        padding: 50px ;
-    }
-    .myWork__item__more-info__item {
-        flex-direction: column;
-    }    
-    .myWork__item img {
-        flex: 0;
-        margin: 5vh 0;
+    .myWork__group__row {
+    flex-direction: column;
     }
 
-
-    
 }
 
 /* Medium */
@@ -715,20 +729,23 @@ header img{
 @media screen and (min-width: 700px) { 
     .myWork__item {
         flex: 0 0 50%;
-        padding: 4rem;
+        padding: 6rem;
+        min-width: 50vw;
+        flex-wrap: wrap;
+
    }
+.myWork__item.open.right-column {
+    transform: translateX(-50vw);
+    transition: ease-out .31;
+}
+    
     .myWork__item__description {
         margin-top: 1rem;
         justify-content: flex-start;
     }
-    .myWork__item.open {
-        padding: 3rem 10rem 7rem 10rem;
-    }
-    .myWork__item__more-info__item.right{
-        flex-direction: row-reverse;
-    }
     .myWork__item img {
         flex: 1;
+        max-width:30%
     }
 }
 
@@ -736,7 +753,6 @@ header img{
 
 @media screen and (min-width: 891px)  {
    .myWork__item__description {
-        padding: 0 1rem ;
         flex: 1;
     }
     
@@ -774,44 +790,52 @@ header img{
     display: flex;
     flex-wrap: wrap;
 }
-.myWork__item {
-    background-color: var(--bg-med);    
+.myWork__group__row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    height: fit-content;
+}
+
+.myWork__item {
+    background-color: var(--bg-med);   
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
     align-content: center;
     justify-content: flex-end;
-    transition: ease-in-out 1s;
-    transform: scale(0.9);
+    transition: ease-out .1s;
+    transform: scale(0.99);
+    max-height: 100vh;
+    padding-top: 4rem;
+
 }
 .myWork__item.open {
     background-color: var(--bg-med);
+    /* position: relative; */
     display: flex;
+    /* width: 100%; */
     flex-basis: 100%;
-    transform: scale(1.2);
-    flex-wrap: wrap;
-    align-items: center;
     text-align: center;
-    justify-content: flex-end;
-    transition: ease-in-out 1s;
+    transition: ease-out .1s;
+    max-height: fit-content;
 }
 
-.myWork__item.onViewport {
-    transform: scale(1);
-    transition: ease-in-out .3s;
-}
 
 .myWork__item h5 {
     margin: 1rem 0;
     width: 100%;
+} 
+.myWork__item.open h5 {
+    position: absolute;
+    top: 0;
+    left: 50vw
 }    
 .myWork__item:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
     z-index: 3;
     transition: ease-in-out .13s;
 }
-.myWork__item.open:hover{
-    transform: scale(1);
-}
+
 
 .myWork__item__description {
     transition: ease-in-out .13s;
@@ -820,21 +844,23 @@ header img{
 .myWork__item img {
     max-height: 40vh;
     max-width: 60vw;
-    margin: 1.5rem;
+    margin: 1.5rem 0;
     width: 90%;
     flex: 1;
     border-radius: 3px;
     filter: drop-shadow(0px 0px 5px black);
 }
 .myWork__item.open img {
-    margin: 1.5rem auto;
+    margin: 0;
 }
+
 .myWork__item__buttons {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin: 1rem;
 }
+
 .myWork__item__description__open-button {
     background-color: inherit;
     color: inherit;
@@ -844,38 +870,50 @@ header img{
     font-family: 'Montserrat';
     font-size: x-small;
     margin: 1rem 0;
+    cursor: pointer;
 }
 .myWork__item__description__open-button:hover {
     color: var(--clr-sec);
 }
-.myWork__item__close-button {
-    background-color: inherit;
-    filter: invert();
-    color: inherit;
-    border: 0;
-    padding: 0;
-    height: 4px;
-    width: 30px;
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    cursor: pointer;
-}
+
 
 .myWork__item__more-info__group.hidden {
     display: none;
 }
+.myWork__item__cover.open {
+    flex: 1;
+    flex-direction: row;
+    display: flex;
+    height: max-content;
+    margin-block: 2rem;
+    text-align: start;
+}
+.myWork__item__cover.open img{
+    max-height: 20vh;
+    max-width: 30vw;
+    min-width: 19vh;
+    width: 90%;
+}
+.myWork__item__cover.open h6 {
+    margin-: 1rem;
+}
 .myWork__item__more-info__item {
     display: flex;
-    align-items: center;
+    text-align: start;
+    flex: 1;
     transition: ease-in-out .2s;
     margin: 1rem 0;
     padding-inline-start: 0;
 }
 .myWork__item__more-info__item img {
     filter: drop-shadow(0px 0px 5px black);
-    max-width: 40vh;
-
+    max-width: 19vh;
+    max-height: 19vh;
+    margin: 0;
+    cursor: pointer;
+}
+.myWork__item__more-info__item h6 {
+    margin: 10px 
 }
 .myWork__item__more-info__item img:hover {
     transform: scale(1.2);
@@ -897,6 +935,20 @@ header img{
 }
 
 
+.zoomedImg {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+.zoomedImg img{
+    width: 70%;
+
+}
 
 /* ------------- footer ------------- */
 
@@ -1030,4 +1082,11 @@ footer h4:hover {
     background: rgb(48,43,99);
     background: linear-gradient(56deg, rgba(48,43,99,1) 58%, rgba(38,65,99,1) 100%);
     clip-path: polygon(100% 0%,100% 0%,100% 100%,0% 100%, 0 60% );
+}
+.copyright {
+    position: absolute;
+    display: flex;
+    z-index: 3;
+    bottom: -3rem;
+    right: 2rem;
 }

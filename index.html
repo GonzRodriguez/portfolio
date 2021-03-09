@@ -12,6 +12,7 @@
     <title>GonzRodriguez Portfolio Website</title>
 </head>
 <body>
+    <!-- <div class="zoomedImg"></div> -->
     <div class="drawer__menu">
         <div class="drawer__layout">
             <div class="drawer__bg" onclick="hamburguerToggle()"></div>
@@ -36,7 +37,7 @@
     <section class="hero" id="home">
         <div class="hero__circle-lg"></div>
         <div class="hero__img">
-            <img src="./public//image2222 - copia - copia.jpg" alt="picture profile">
+            <img src="./public/b&w.png" alt="picture profile">
         </div>
         <div class="hero__text">
             <h3 class="hero__title">Hi there, My name is </h3>
@@ -51,13 +52,13 @@
                 <p class="about__p">I'm a really dedicated person who feels very comfortable with learning new things. I'm passionate for the IT world and
                 anything that has something to do with software and specially with coding.
                 <br><br>
-                I've started a with HTML, CSS and JavaScript because they awesome and I needed a place to start from. But I gonna get my
-                hands dirty with IA and machine learning as soon as I can because they the future present
+                I've started with HTML, CSS and JavaScript because they awesome and I needed a place to start from. But I gonna get my
+                hands dirty with IA and machine learning as soon as I can, because they the <s>future</s>  present
                 <br><br>
                 At the moment, junior full stack developer and builder. And very soon code builder.
                 <br><br>
                 Currently living in Brighton, UK and born in Madrid, Spain.</p>
-                <img src="./public/image2222 - copia - copia.jpg" alt="picture profile" class="about__description__image">
+                <img src="./public/de-frente.jpg" alt="picture profile" class="about__description__image">
             </div>
             <div class="about__icons__square">
                 <ul class="about__icons__square__group">
@@ -96,82 +97,127 @@
             <div class="myWork__container">
                 <h2>My Work</h2>
                 <div class="myWork__group">
-                    <div class="myWork__item" style="background-color: var(--clr-pri); ">
-                        <h5>Enterium </h5>
-                        <img src="./public/enterium.png">
-                        <div class="divider hidden"></div>
-                        <div class="myWork__item__description">
-                            <h6> Blog inspired in medium with authentication users, and mongo </h6>
-                            <button class="myWork__item__description__open-button">MORE</button>
-                        </div>
-                        <ul class="myWork__item__more-info__group hidden">
-                            <div class="divider"></div>
-                            <li class="myWork__item__more-info__item">
-                                <img src="public/enterium-create-post.png" alt="compose">
-                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi facilis non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.</h6>
-                            </li>
-                            <div class="divider"></div>
-                            <li class="myWork__item__more-info__item right">
-                                <img src="public/enterium-profile.png" alt="profile">
-                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi facilis
-                                    non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.</h6>
-
-                            </li>
-                        </ul>
-                        <div class="myWork__item__buttons">
-                            <a href="https://github.com/GonzRodriguez/blog-project" target="_blank" class="myWork__item__code__button">SEE THE CODE</a>
-                        </div>
-                    </div>
-                    <div class="myWork__item" style="background-color: white; color: black;">
-                        <h5>Reactive notes </h5>
-                        <img src="./public/keeper.png">
-                        <!-- <div class="divider hidden"></div> -->
-                        <div class="myWork__item__description">
-                            <h6> Blog inspired in medium with authentication users, and mongo </h6>
-                        </div>
-                        <div class="myWork__item__buttons">
-                            <a href="https://github.com/GonzRodriguez/Reactive-notes" target="_blank" class="myWork__item__code__button" >SEE THE CODE</a>
-                        </div>
-                    </div>
-                    <div class="myWork__item" style="background-color: azure; color: black;">
-                        <h5>Drum kit</h5>
-                        <img src="./public/drum.png">
-                            <div class="myWork__item__description">
-                                <h6>Simple web app using CSS, HTML and Javascript only, made througth the bootcamp course</h6>
+                    <div class="myWork__group__row">
+                        <div class="myWork__item " id="left-column"  style="background-color: azure; color: black;">
+                            <div class="myWork__item__cover">
+                                <h5>Bao Gallery </h5>
+                                <img src="./public/bao-cover.png">
+                                <!-- <div class="divider hidden"></div> -->
+                                <div class="myWork__item__description">
+                                    <h6> Blog inspired in medium.com with authentication users system, post creation, deletion and update.
+                                    </h6>
+                                    <button class="myWork__item__description__open-button">MORE</button>
+                                </div>
                             </div>
-                        <div class="myWork__item__buttons">
-                            <a href="https://github.com/GonzRodriguez/Drums_soundboard" target="_blank" class="myWork__item__code__button">SEE THE CODE</a>
+                            <ul class="myWork__item__more-info__group hidden">
+                                <div class="divider"></div>
+                                <li class="myWork__item__more-info__item">
+                                    <img src="public/enterium-create-post.png" alt="compose">
+                                    <h6>Create a post and save it in the database. All the post will be shown in the home and profile page
+                                        using ejs.</h6>
+                                </li>
+                                <div class="divider"></div>
+                                <li class="myWork__item__more-info__item">
+                                    <img src="public/enterium-profile.png" alt="profile">
+                                    <h6>Once the user is authenicated with passport, will be redirected to the profile page. In this page
+                                        the user will be able to create, update and delete post and see his/her last posts.</h6>
+                    
+                                </li>
+                            </ul>
+                            <div class="myWork__item__buttons">
+                                <a href="https://github.com/GonzRodriguez/blog-project" target="_blank"
+                                    class="myWork__item__code__button">SEE THE CODE</a>
+                            </div>
+                        </div>
+                        <div class="myWork__item " id="right-column" style="background-color: var(--clr-pri); ">
+                            <div class="myWork__item__cover">
+                                <h5>Enterium </h5>
+                                <img src="./public/ENTERIUM-LOGO.png">
+                                <!-- <div class="divider hidden"></div> -->
+                                <div class="myWork__item__description">
+                                    <h6> Blog inspired in medium.com with authentication users system, post creation, deletion and update. </h6>
+                                    <button class="myWork__item__description__open-button">MORE</button>
+                                </div>
+                            </div>
+                            <ul class="myWork__item__more-info__group hidden">
+                                <div class="divider"></div>
+                                <li class="myWork__item__more-info__item">
+                                    <img src="public/enterium-create-post.png" alt="compose">
+                                    <h6>Create a post and save it in the database. All the post will be shown in the home and profile page using
+                                        ejs.</h6>
+                                </li>
+                                <div class="divider"></div>
+                                <li class="myWork__item__more-info__item">
+                                    <img src="public/enterium-profile.png" alt="profile">
+                                    <h6>Once the user is authenicated with passport, will be redirected to the profile page. In this page the
+                                        user will be able to create, update and delete post and see his/her last posts.</h6>
+
+                                </li>
+                            </ul>
+                            <div class="myWork__item__buttons">
+                                <a href="https://github.com/GonzRodriguez/blog-project" target="_blank" class="myWork__item__code__button">SEE
+                                    THE CODE</a>
+                            </div>
                         </div>
                     </div>
-                        <div class="myWork__item" style="background-color: var(--clr-pri-light); color: white;">
-                            <h5>This Portfolio</h5>
-                            <img src="./public/portfolio.png">
-                            <!-- <div class="divider hidden"></div> -->
-                            <div class="myWork__item__description">
-                                <h6> Blog inspired in medium with authentication users, and mongo </h6>
-                                <button class="myWork__item__description__open-button">MORE</button>
+                    <div class="myWork__group__row">
+                        <div class="myWork__item" id="left-column" style="background-color: var(--clr-pri-light); color: white;">
+                            <div class="myWork__item__cover">
+                                <h5>This Portfolio</h5>
+                                <img src="./public/portfolio_cover.png">
+                                <!-- <div class="divider hidden"></div> -->
+                                <div class="myWork__item__description">
+                                    <h6>Pure HTML, CSS and Javascript has being used to make this portfolio and deployed with netfly.</h6>
+                                    <button class="myWork__item__description__open-button">MORE</button>
+                                </div>
                             </div>
-                                <ul class="myWork__item__more-info__group hidden">
-                                    <div class="divider"></div>
-                                    <li class="myWork__item__more-info__item">
-                                        <img src="public/enterium-create-post.png" alt="compose">
-                                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi
-                                            facilis non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.
-                                        </h6>
-                                    </li>
-                                    <div class="divider"></div>
-                                    <li class="myWork__item__more-info__item right">
-                                        <img src="public/enterium-profile.png" alt="profile">
-                                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi
-                                            facilis
-                                            non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.</h6>
-                                    </li>
-                                </ul>
-
+                            <ul class="myWork__item__more-info__group hidden">
+                                <div class="divider"></div>
+                                <li class="myWork__item__more-info__item">
+                                    <img src="public/enterium-create-post.png" alt="compose">
+                                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi
+                                        facilis non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.
+                                    </h6>
+                                </li>
+                                <div class="divider"></div>
+                                <li class="myWork__item__more-info__item right">
+                                    <img src="public/enterium-profile.png" alt="profile">
+                                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi
+                                        facilis
+                                        non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.</h6>
+                                </li>
+                            </ul>
+                            
                             <div class="myWork__item__buttons">
                                 <a href="https://github.com/GonzRodriguez/portfolio" target="_blank" class="myWork__item__code__button">SEE THE CODE</a>
                             </div>
+                        </div>  
+                        <div class="myWork__item " id="right-column" style="background-color: white; color: black;">
+                            <h5>Reactive notes </h5>
+                            <img src="./public/Reactive Notes.png">
+                            
+                            <!-- <div class="divider hidden"></div> -->
+                            <div class="myWork__item__description">
+                                <h6>Bootcamp project using react. Very simple app where we applied everything we learned about reactivity and state management.</h6>
+                            </div>
+                            <div class="myWork__item__buttons">
+                                <a href="https://codesandbox.io/s/reactive-notes-x9c43" target="_blank" class="myWork__item__code__button" >SEE THE CODE</a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="myWork__group__row">
+                        <div class="myWork__item" id="left-column" style="background-color: var(--clr-pri); " >
+                            <h5>Drum kit</h5>
+                            <img src="./public/drum.svg">
+                            <div class="myWork__item__description">
+                                <h6>Simple web app using CSS, HTML and Javascript only, made througth the bootcamp course</h6>
+                            </div>
+                            <div class="myWork__item__buttons">
+                                <a href="https://codesandbox.io/s/drum-soundboard-ksmlf?file=/src/index.js target="_blank" class="myWork__item__code__button">SEE THE SANDBOX</a>
+                            </div>
+                        </div>
+                        <div class="myWork__item" id="rigth-column" ></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,7 +238,8 @@
             <div class="polygone__circle-lg"></div>
             <div class="polygone__circle-md"></div>
             <div class="polygone__circle-sm"></div>
-            <div class="footer__polygon"></div>
+            <div class="copyright"><p>Copyright ⓒ &nbsp;</p></div>
+            
     </footer>
 
 <script src="app.js"></script>
