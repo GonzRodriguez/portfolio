@@ -11,7 +11,7 @@ const drawerMenu = document.querySelector(".drawer__menu");
 const servicesOnScreen = document.querySelector(".services__greenBlock");
 const myWorkItems = document.querySelectorAll(".myWork__item");
 const myWorkGroup = document.querySelector(".myWork__group");
-const openDescriptionButtons = document.querySelectorAll(".myWork__item__description__open-button");
+const openDescriptionButtons = document.querySelectorAll(".more");
 const closeDescriptionButtons = document.querySelectorAll(".myWork__item__description__close-button");
 const copyright = document.querySelector(".copyright");
 
@@ -64,7 +64,7 @@ openDescriptionButtons.forEach(button => {
         cross.classList.remove("hidden");
         item.classList.toggle("open");
         workItem__cover.classList.toggle("open");
-        item.querySelector("ul").classList.toggle("hidden");
+        item.querySelector(".myWork__item__more-info__group").classList.toggle("hidden");
         item.appendChild(cross)
     })
 
@@ -73,7 +73,7 @@ openDescriptionButtons.forEach(button => {
         item.classList.toggle("open");
         item.classList.remove("right-column");
         workItem__cover.classList.toggle("open");
-        item.querySelector("ul").classList.toggle("hidden");
+        item.querySelector(".myWork__item__more-info__group").classList.toggle("hidden");
         cross.classList.add("hidden");
         cross.classList.remove(".close__button__Element");
 
@@ -82,35 +82,11 @@ openDescriptionButtons.forEach(button => {
 
 });
 
-
-function inViewport(element) {
-
-    const el = element.getBoundingClientRect();
-    return !(el.top > innerHeight || el.bottom < 0);
-}
-function delayAddClass(itemIndex, item, newClass) {
-    const delay = (itemIndex + 1) * 50
-    setTimeout(() => {
-         item.classList.add(newClass)
-    }, delay);
-}
-
-
+// handles the navbar hamburger on scroll
 document.addEventListener('scroll', () => {
     
     window.scrollY > 0 && !hamburguer.classList.value.includes("on")
     ? hamburguer.classList.add("floatMenu") : hamburguer.classList.remove("floatMenu");
-    
-    
-    myWorkItems.forEach(item => {
-        
-        // console.log(item);
-        if (inViewport(item)) {
-            delayAddClass(Array.from(myWorkItems).indexOf(item), item, "onViewport")
-            
-        }
-    });
-    
 })
 
 

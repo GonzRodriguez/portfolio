@@ -147,7 +147,7 @@ header img{
 .divider {
     height: 1px;
     width: 90%;
-    background-color: var(--bg-color);
+    background-color: var(--bg-med);
     padding: 0;
     margin: auto;
 }
@@ -529,20 +529,6 @@ header img{
         margin: 0 2rem;
     }
 
-    .about__icons__square{
-        top: 105vh;
-    }
-    .about__icons__square__group {
-        justify-content: center;
-    }
-
-    .about__icons__square__item {
-        text-align: center;
-        color: var(--clr-sec);
-        margin: 1rem;
-        font-size: 1rem;
-        flex-basis: 5%;
-    }
 }
 
 /* Medium */
@@ -557,19 +543,7 @@ header img{
     .about__description {
         flex-direction: column-reverse;
     }
-    .about__icons__square{
-        top: 105vh;
-    }
-    .about__icons__square__group {
-        justify-content: center;
-    }
-    .about__icons__square__item {
-        text-align: center;
-        margin: 1rem;
-        font-size: 1.5rem;
-        flex-basis: 5%;
-        font-weight: var(--fw-med);
-    }
+
     .about__title {
         margin: 0 1rem;
         text-align: end;
@@ -590,14 +564,6 @@ header img{
     .about__description {
         flex-direction: row;
     }
-    .about__icons__square__group {
-        justify-content: center;
-    }
-
-    .about__icons__square{
-        top: 95vh;
-    }
-
 }
 
 /* Extra Large */
@@ -639,30 +605,7 @@ header img{
     filter: drop-shadow(0px 0px 5px black);
 }
 
-.about__icons__square{
-    z-index: 2;
-    height: fit-content;
-    width: 100%;
-    float: left;
-}
 
-
-.about__icons__square__group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.about__icons__square__item {
-    text-align: center;
-    color: var(--bg-med);
-    margin: 1rem;
-    flex-basis: 5%;        
-}
-.about__icons__square__item p {
-    font-weight: var(--fw-reg);
-    font-size: small;
-}
 
 
 /* ------------- My Services ------------- */
@@ -739,13 +682,9 @@ header img{
     transition: ease-out .31;
 }
     
-    .myWork__item__description {
-        margin-top: 1rem;
-        justify-content: flex-start;
-    }
     .myWork__item img {
         flex: 1;
-        max-width:30%
+        /* max-width:30% */
     }
 }
 
@@ -805,7 +744,6 @@ header img{
     justify-content: flex-end;
     transition: ease-out .1s;
     transform: scale(0.99);
-    max-height: 100vh;
     padding-top: 4rem;
 
 }
@@ -828,7 +766,8 @@ header img{
 .myWork__item.open h5 {
     position: absolute;
     top: 0;
-    left: 50vw
+    text-align: center;
+    right: 0
 }    
 .myWork__item:hover{
     transform: scale(1.02);
@@ -839,13 +778,17 @@ header img{
 
 .myWork__item__description {
     transition: ease-in-out .13s;
+    margin-block: .5rem;
+}
+.myWork__item__description h6 {
+    margin-block: 1rem;
 }
 
 .myWork__item img {
-    max-height: 40vh;
-    max-width: 60vw;
-    margin: 1.5rem 0;
-    width: 90%;
+    /* max-height: 40vh;
+    max-width: 60vw; */
+    margin: 1rem 0 .5rem 0;
+    width: 100%;
     flex: 1;
     border-radius: 3px;
     filter: drop-shadow(0px 0px 5px black);
@@ -857,8 +800,8 @@ header img{
 .myWork__item__buttons {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    margin: 1rem;
+    justify-content: space-between;
+    flex-direction:row-reverse
 }
 
 .myWork__item__description__open-button {
@@ -869,7 +812,7 @@ header img{
     font-weight: 700;
     font-family: 'Montserrat';
     font-size: x-small;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
     cursor: pointer;
 }
 .myWork__item__description__open-button:hover {
@@ -881,7 +824,7 @@ header img{
     display: none;
 }
 .myWork__item__cover.open {
-    flex: 1;
+    /* flex: 1; */
     flex-direction: row;
     display: flex;
     height: max-content;
@@ -889,14 +832,13 @@ header img{
     text-align: start;
 }
 .myWork__item__cover.open img{
-    max-height: 20vh;
+    max-height: 45vh;
     max-width: 30vw;
     min-width: 19vh;
+    margin-right: 1rem;
     width: 90%;
 }
-.myWork__item__cover.open h6 {
-    margin-: 1rem;
-}
+
 .myWork__item__more-info__item {
     display: flex;
     text-align: start;
@@ -906,8 +848,9 @@ header img{
     padding-inline-start: 0;
 }
 .myWork__item__more-info__item img {
-    filter: drop-shadow(0px 0px 5px black);
+    filter: drop-shadow(0px 0px 1px black);
     max-width: 19vh;
+    width: 30rem;
     max-height: 19vh;
     margin: 0;
     cursor: pointer;
@@ -918,6 +861,32 @@ header img{
 .myWork__item__more-info__item img:hover {
     transform: scale(1.2);
     transition: ease-in-out .1s;
+}
+.myWork__icons__square{
+    height: max-content;
+    width: max-content;
+}
+
+
+.myWork__icons__square__group {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bg-med);
+    border-radius: 7px 17px 7px 17px;
+    padding-inline: 7px;
+}
+
+.myWork__icons__square__item {
+    text-align: justify;
+    color: var(--clr-sec);
+    padding: .2rem;
+    border-radius: 5px;
+    margin: .2rem;
+    font-size: 20px
+}
+.myWork__icons__square__item p {
+    font-weight: var(--fw-reg);
+    font-size: small;
 }
 
 .myWork__item__code__button {

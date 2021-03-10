@@ -20,7 +20,7 @@
                 <li class="drawer__item"><a href="#home" class="drawer__link">Home</a></li>
                 <li class="drawer__item"><a href="#services" class="drawer__link">My services</a></li>
                 <li class="drawer__item"><a href="#myWork" class="drawer__link">myWork</a></li>
-                <li class="drawer__item"><a href="#about" class="drawer__link">About</a></li>
+                <li class="drawer__item"><a href="#myWork" class="drawer__link">About</a></li>
                 <li class="drawer__item"><a href="#footer" class="drawer__link">Contact</a></li>
             </ul>
         </div>
@@ -60,34 +60,7 @@
                 Currently living in Brighton, UK and born in Madrid, Spain.</p>
                 <img src="./public/de-frente.jpg" alt="picture profile" class="about__description__image">
             </div>
-            <div class="about__icons__square">
-                <ul class="about__icons__square__group">
-                    <li class="about__icons__square__item">
-                        <i class="fab fa-css3-alt"></i>
-                        <p>CSS3</p>
-                    </li>
-                    <li class="about__icons__square__item">
-                        <i class="fab fa-html5"></i>
-                        <p>HTML5</p>
-                    </li>
-                    <li class="about__icons__square__item">
-                        <i class="fab fa-js"></i>
-                        <p>Javascript</p>
-                    </li>
-                    <li class="about__icons__square__item">
-                        <i class="fab fa-node-js"></i>
-                        <p>Nodejs</p>
-                    </li>
-                    <li class="about__icons__square__item">
-                        <i class="fas fa-database"></i>
-                        <p>MongoDB</p>
-                    </li>
-                    <li class="about__icons__square__item">
-                        <i class="fab fa-react"></i>
-                        <p>Reactjs</p>
-                    </li>
-                </ul>
-        </div>
+
     </section>
     <!-- <section class="services" id="services">
 
@@ -101,27 +74,65 @@
                         <div class="myWork__item " id="left-column"  style="background-color: azure; color: black;">
                             <div class="myWork__item__cover">
                                 <h5>Bao Gallery </h5>
-                                <img src="./public/bao-cover.png">
+                                <img src="./public/bao-cover.png"  alt="cover">
                                 <!-- <div class="divider hidden"></div> -->
                                 <div class="myWork__item__description">
-                                    <h6> Blog inspired in medium.com with authentication users system, post creation, deletion and update.
-                                    </h6>
-                                    <button class="myWork__item__description__open-button">MORE</button>
+                                        <div class="myWork__icons__square">
+                                            <ul class="myWork__icons__square__group">
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-css3-alt"></i>
+                                                    <!-- <p>CSS3</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-html5"></i>
+                                                    <!-- <p>HTML5</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-js"></i>
+                                                    <!-- <p>Javascript</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-node-js"></i>
+                                                    <!-- <p>Nodejs</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fas fa-database"></i>
+                                                    <!-- <p>MongoDB</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-react"></i>
+                                                    <!-- <p>Reactjs</p> -->
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    <h6>The Bao Gallery is a marketplace with a multy-vendor sistem where the photograpers are able to share their pictures and get paid
+                                    for it. </h6>
+                                    <button class="myWork__item__description__open-button more">MORE</button>
                                 </div>
                             </div>
                             <ul class="myWork__item__more-info__group hidden">
                                 <div class="divider"></div>
                                 <li class="myWork__item__more-info__item">
-                                    <img src="public/enterium-create-post.png" alt="compose">
-                                    <h6>Create a post and save it in the database. All the post will be shown in the home and profile page
-                                        using ejs.</h6>
+                                    <img src="public/bao-home.png" alt="home">
+                                    <h6>Once the picture is uploaded, the potential customer is able to find the author, the collection or the picture itself by using mongoDB fuzzy searching.I use react, metrial-ui and figma to style the whole webpage.</h6>
                                 </li>
                                 <div class="divider"></div>
                                 <li class="myWork__item__more-info__item">
-                                    <img src="public/enterium-profile.png" alt="profile">
-                                    <h6>Once the user is authenicated with passport, will be redirected to the profile page. In this page
-                                        the user will be able to create, update and delete post and see his/her last posts.</h6>
+                                    <img src="public/bao-login.png" alt="login">
+                                    <h6>Users authentication is done with JWT. I store an access token un the database and send refresh token to client in order to get verify every 10 minutes and generate a new acces token.</h6>
                     
+                                </li>
+                                <div class="divider"></div>
+                                <li class="myWork__item__more-info__item">
+                                    <img src="public/bao-dashboard.png" alt="dashboard">
+                                    <h6>Un finished dashboard where the vendor is able to manage his or her account. Update personal details, manage stripe accounts, see statistics and more.</h6>
+                                
+                                </li>
+                                <div class="divider"></div>
+                                <li class="myWork__item__more-info__item">
+                                    <img src="public/bao-uplaod.png" alt="upload">
+                                    <h6>I use nodejs in the backend to handle all the uploads and store the photografies in the server using different npm pakckages.</h6>
+                                
                                 </li>
                             </ul>
                             <div class="myWork__item__buttons">
@@ -131,12 +142,43 @@
                         </div>
                         <div class="myWork__item " id="right-column" style="background-color: var(--clr-pri); ">
                             <div class="myWork__item__cover">
+                                
+                                <a href="https://enterium.herokuapp.com/" target="_blank">
                                 <h5>Enterium </h5>
+                                </a>
                                 <img src="./public/ENTERIUM-LOGO.png">
                                 <!-- <div class="divider hidden"></div> -->
                                 <div class="myWork__item__description">
+                                        <div class="myWork__icons__square">
+                                            <ul class="myWork__icons__square__group">
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-css3-alt"></i>
+                                                    <!-- <p>CSS3</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-html5"></i>
+                                                    <!-- <p>HTML5</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-js"></i>
+                                                    <!-- <p>Javascript</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-node-js"></i>
+                                                    <!-- <p>Nodejs</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fas fa-database"></i>
+                                                    <!-- <p>MongoDB</p> -->
+                                                </li>
+                                                <li class="myWork__icons__square__item">
+                                                    <i class="fab fa-react"></i>
+                                                    <!-- <p>Reactjs</p> -->
+                                                </li>
+                                            </ul>
+                                        </div>
                                     <h6> Blog inspired in medium.com with authentication users system, post creation, deletion and update. </h6>
-                                    <button class="myWork__item__description__open-button">MORE</button>
+                                    <button class="myWork__item__description__open-button more">MORE</button>
                                 </div>
                             </div>
                             <ul class="myWork__item__more-info__group hidden">
@@ -151,33 +193,59 @@
                                     <img src="public/enterium-profile.png" alt="profile">
                                     <h6>Once the user is authenicated with passport, will be redirected to the profile page. In this page the
                                         user will be able to create, update and delete post and see his/her last posts.</h6>
-
                                 </li>
                             </ul>
                             <div class="myWork__item__buttons">
-                                <a href="https://github.com/GonzRodriguez/blog-project" target="_blank" class="myWork__item__code__button">SEE
-                                    THE CODE</a>
+                                <a href="https://github.com/GonzRodriguez/blog-project" target="_blank" class="myWork__item__code__button">SEE THE CODE </a>
+                                <a href="https://enterium.herokuapp.com/" target="_blank" class="myWork__item__description__open-button">WEB PAGE</a>
+
                             </div>
+                                
                         </div>
                     </div>
                     <div class="myWork__group__row">
                         <div class="myWork__item" id="left-column" style="background-color: var(--clr-pri-light); color: white;">
                             <div class="myWork__item__cover">
                                 <h5>This Portfolio</h5>
-                                <img src="./public/portfolio_cover.png">
+                                <img src="./public/this-portfolio.svg">
                                 <!-- <div class="divider hidden"></div> -->
                                 <div class="myWork__item__description">
-                                    <h6>Pure HTML, CSS and Javascript has being used to make this portfolio and deployed with netfly.</h6>
-                                    <button class="myWork__item__description__open-button">MORE</button>
+                                    <div class="myWork__icons__square">
+                                        <ul class="myWork__icons__square__group">
+                                            <li class="myWork__icons__square__item">
+                                                <i class="fab fa-css3-alt"></i>
+                                                <!-- <p>CSS3</p> -->
+                                            </li>
+                                            <li class="myWork__icons__square__item">
+                                                <i class="fab fa-html5"></i>
+                                                <!-- <p>HTML5</p> -->
+                                            </li>
+                                            <li class="myWork__icons__square__item">
+                                                <i class="fab fa-js"></i>
+                                                <!-- <p>Javascript</p> -->
+                                            </li>
+                                            <li class="myWork__icons__square__item">
+                                                <i class="fab fa-node-js"></i>
+                                                <!-- <p>Nodejs</p> -->
+                                            </li>
+                                            <li class="myWork__icons__square__item">
+                                                <i class="fas fa-database"></i>
+                                                <!-- <p>MongoDB</p> -->
+                                            </li>
+                                            <li class="myWork__icons__square__item">
+                                                <i class="fab fa-react"></i>
+                                                <!-- <p>Reactjs</p> -->
+                                            </li>
+                                        </ul>
+                                    </div><h6>Pure HTML, CSS and Javascript has being used to make this portfolio and deployed with netfly.</h6>
+                                    <button class="myWork__item__description__open-button more">MORE</button>
                                 </div>
                             </div>
                             <ul class="myWork__item__more-info__group hidden">
                                 <div class="divider"></div>
                                 <li class="myWork__item__more-info__item">
-                                    <img src="public/enterium-create-post.png" alt="compose">
-                                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, vitae quia aperiam nihil, quibusdam animi
-                                        facilis non placeat labore quod assumenda porro minus, provident id dicta voluptas ratione eveniet dolores.
-                                    </h6>
+                                    <img src="public/portfolio_cover.png" alt="compose"><img src="public/portfolio_cover.png" alt="compose">
+                                    <h6> </h6>
                                 </li>
                                 <div class="divider"></div>
                                 <li class="myWork__item__more-info__item right">
@@ -198,10 +266,37 @@
                             
                             <!-- <div class="divider hidden"></div> -->
                             <div class="myWork__item__description">
-                                <h6>Bootcamp project using react. Very simple app where we applied everything we learned about reactivity and state management.</h6>
+                                <div class="myWork__icons__square">
+                                    <ul class="myWork__icons__square__group">
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-css3-alt"></i>
+                                            <!-- <p>CSS3</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-html5"></i>
+                                            <!-- <p>HTML5</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-js"></i>
+                                            <!-- <p>Javascript</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-node-js"></i>
+                                            <!-- <p>Nodejs</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fas fa-database"></i>
+                                            <!-- <p>MongoDB</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-react"></i>
+                                            <!-- <p>Reactjs</p> -->
+                                        </li>
+                                    </ul>
+                                </div><h6>Bootcamp project using react. Very simple app where we applied everything we learned myWork reactivity and state management.</h6>
                             </div>
                             <div class="myWork__item__buttons">
-                                <a href="https://codesandbox.io/s/reactive-notes-x9c43" target="_blank" class="myWork__item__code__button" >SEE THE CODE</a>
+                                <a href="https://codesandbox.io/s/reactive-notes-x9c43" target="_blank" class="myWork__item__code__button" >SEE THE SANDBOX</a>
                             </div>
                         </div>
                     </div>
@@ -210,7 +305,34 @@
                             <h5>Drum kit</h5>
                             <img src="./public/drum.svg">
                             <div class="myWork__item__description">
-                                <h6>Simple web app using CSS, HTML and Javascript only, made througth the bootcamp course</h6>
+                                <div class="myWork__icons__square">
+                                    <ul class="myWork__icons__square__group">
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-css3-alt"></i>
+                                            <!-- <p>CSS3</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-html5"></i>
+                                            <!-- <p>HTML5</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-js"></i>
+                                            <!-- <p>Javascript</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-node-js"></i>
+                                            <!-- <p>Nodejs</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fas fa-database"></i>
+                                            <!-- <p>MongoDB</p> -->
+                                        </li>
+                                        <li class="myWork__icons__square__item">
+                                            <i class="fab fa-react"></i>
+                                            <!-- <p>Reactjs</p> -->
+                                        </li>
+                                    </ul>
+                                </div><h6>Simple web app using CSS, HTML and Javascript only, made througth the bootcamp course</h6>
                             </div>
                             <div class="myWork__item__buttons">
                                 <a href="https://codesandbox.io/s/drum-soundboard-ksmlf?file=/src/index.js target="_blank" class="myWork__item__code__button">SEE THE SANDBOX</a>
