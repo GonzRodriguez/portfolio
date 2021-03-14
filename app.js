@@ -84,7 +84,6 @@ openDescriptionButtons.forEach(button => {
 
 // handles the navbar hamburger on scroll
 document.addEventListener('scroll', () => {
-    
     window.scrollY > 0 && !hamburguer.classList.value.includes("on")
     ? hamburguer.classList.add("floatMenu") : hamburguer.classList.remove("floatMenu");
 })

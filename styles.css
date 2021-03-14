@@ -15,8 +15,8 @@
 
 :root {
     /* colors */
-    --bg-color: #1a1a1a;
-    --bg-med: #3d3d3d;
+    --bg-color: #111111;
+    --bg-med: #222222;
     --bg-light: #ededed;
     --clr-pri: #302b63;
     --clr-pri-light: #264163;
@@ -68,7 +68,7 @@ body {
     height: 100%;
     scroll-behavior: smooth;
 }
- body {
+body {
      overflow-x: hidden;
  }
 
@@ -92,6 +92,7 @@ h1 {
 h2 {
     font-size: var(--fs-h2);
     font-weight: var(--fw-bold);
+    font-family: 'Oswald', serif;
 }
 h3 {
     /* font-size: var(--fs-h3); */
@@ -99,6 +100,7 @@ h3 {
     margin-block-start: .3em;
     margin-block-end: .3em;
 }
+
 h4 {
     font-size: var(--fs-h4);
     font-weight: var(--fw-med);
@@ -108,23 +110,31 @@ h6 {
     font-weight: var(--fw-reg);
     margin: 0;
 }
+/* mark {
+    background-color: var(--clr-pri-light);
+    color: white;
+} */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(50, 37, 75, 0.426);
+  background: var(--clr-pri-dark);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #313131;
+  background: var(--clr-sec-dark);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--clr-pri-light);
+  width: 12px;
+}
+::-webkit-scrollbar:hover {
+  width: 14px;
 }
 
 header {
@@ -310,7 +320,7 @@ header img{
         border-bottom: solid;
         border-right: solid;
         margin-top: 2rem;
-        top: calc(80% - 45vh);
+        top: calc(80% - 34vh);
         width: 100vw;
     }
 
@@ -325,7 +335,7 @@ header img{
     .hero::after {
         content: "";
         height: 170vh;
-        clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 82%);
+        clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 72%);
     }
     .hero__circle-lg {
             transform: translate(-30vh, -6vh);
@@ -353,7 +363,7 @@ header img{
     .hero::after {
         content: "";
         height: 150vh;
-        clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 82%);
+        clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 73%);
     }
     .hero__circle-lg {
             transform: translate(-50vh, -6vh);
@@ -378,7 +388,7 @@ header img{
     .hero::after {
         content: "";
         height: 120vh;
-        clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 92%);
+        clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 80%);
     }
     .hero__text {
         top: calc(74% - 46vh);
@@ -459,7 +469,7 @@ header img{
     top: 0;
     position: absolute;
     right: 0;
-    width: 150vw;
+    width: 120vw;
     margin: auto;
     background: rgb(72,52,224);
     background: linear-gradient(357deg, var(--clr-pri) -89%, var(--clr-pri-dark) 103%);
@@ -509,6 +519,16 @@ header img{
     margin: 0;
     text-align: end;
 }
+.hero__title {
+    text-shadow: 1px 1px var(--clr-pri-light);
+}
+.hero__subtitle {
+    margin-block-end: .8em;
+    text-shadow: 1px 1px var(--clr-pri-light);
+}
+.hero__tools__icons.tools__icons {
+    margin-block: 1rem;
+}
 
 /* ------------- ABOUT ------------- */
 
@@ -518,17 +538,24 @@ header img{
     .about {
         height: 75vh;
         padding: 4rem 0;
-        margin-top: 70vh;   
+        margin-top: 40vh;   
     }
     .about__title {
         padding: 0 3rem;
         text-align: center;
     }
     .about__description {
-        flex-direction: column-reverse;
+        flex-wrap: wrap;
         margin: 0 2rem;
     }
-
+    .about__description p {
+        flex: 1;
+        margin: 1rem ;
+    }
+    .about__description__image{
+        margin: auto;
+        /* order: -1; */
+    }
 }
 
 /* Medium */
@@ -537,17 +564,22 @@ header img{
     .about {
         height: 55vh;
         padding: 3rem 5rem;
-        margin-top: 50vh;   
+        margin-top: 20vh;   
     }
 
-    .about__description {
-        flex-direction: column-reverse;
-    }
 
     .about__title {
         margin: 0 1rem;
         text-align: end;
 
+    }
+    .about__description p {
+        flex: 1;
+        margin: 1rem ;
+        flex-wrap: wrap;
+    }
+    .about__description {
+        flex-wrap: wrap;
     }
 
 }
@@ -563,6 +595,11 @@ header img{
 
     .about__description {
         flex-direction: row;
+        flex-wrap: nowrap;
+    }    
+    .about__description p {
+        flex: 1;
+        margin: 0 1rem 1rem 3rem;
     }
 }
 
@@ -589,22 +626,19 @@ header img{
 
 .about__description {
     display: flex;
-    padding: 1rem 1rem;
+    align-items: end;
 }
 .about__description p {
-    flex: 1;
-    margin: 1rem 0;
+    font-family: 'Merriweather', serif;
 }
 
 .about__description__image{
     flex: 1;
-    margin: auto;
     min-width: 200px;
     max-width: 20vw;
     border-radius: 3px;
     filter: drop-shadow(0px 0px 5px black);
 }
-
 
 
 
@@ -637,10 +671,7 @@ header img{
         height: 45vh;
     }
 }
-.services {
-    /* width: 100%;
-    position: relative; */
-}
+
 
 
 
@@ -801,7 +832,8 @@ header img{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-direction:row-reverse
+    flex-direction:row-reverse;
+    align-items: baseline;
 }
 
 .myWork__item__description__open-button {
@@ -862,31 +894,32 @@ header img{
     transform: scale(1.2);
     transition: ease-in-out .1s;
 }
-.myWork__icons__square{
+.tools__icons{
     height: max-content;
     width: max-content;
 }
 
 
-.myWork__icons__square__group {
+.tools__icons__group {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--bg-med);
+    background-color: var(--clr-sec-dark);
     border-radius: 7px 17px 7px 17px;
     padding-inline: 7px;
+    mix-blend-mode: luminosity;
 }
-
-.myWork__icons__square__item {
-    text-align: justify;
-    color: var(--clr-sec);
+.tools__icons__item {
+    text-align: center;
+    border-radius: 7px 17px 7px 17px;
+    color: white;
     padding: .2rem;
     border-radius: 5px;
     margin: .2rem;
-    font-size: 20px
+    font-size: 20px;
 }
-.myWork__icons__square__item p {
+.tools__icons__item p {
     font-weight: var(--fw-reg);
-    font-size: small;
+    font-size: x-small;
 }
 
 .myWork__item__code__button {
@@ -971,6 +1004,7 @@ footer h4:hover {
 .footer__email {
     display: inline;
     margin: auto;
+    text-shadow: 1px 1px var(--clr-pri-light);
 }
 
 .footer__item {

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,800;1,500&display=swap" rel="stylesheet">
     <title>GonzRodriguez Portfolio Website</title>
@@ -27,7 +28,7 @@
     </div>
     <header class="header">
         
-            <img src="./public/finalLogo-single.svg" alt="logo" style="width: 8vh">
+            <img src="./public/grFinal-log-single.svg" alt="logo" style="width: 8vh;">
         <div class="hamburguer"  >
             <div class="hamburguer__stripe hamburguer__stripe__top"></div>
             <div class="hamburguer__stripe hamburguer__stripe__middle"></div>
@@ -37,29 +38,66 @@
     <section class="hero" id="home">
         <div class="hero__circle-lg"></div>
         <div class="hero__img">
-            <img src="./public/b&w.png" alt="picture profile">
+            <img src="./public/no-bg.png" alt="picture profile">
         </div>
         <div class="hero__text">
             <h3 class="hero__title">Hi there, My name is </h3>
             <span class="hero__name">Gonzalo Rodríguez</span>
-            <h3 class="hero__subtitle"><em>Junior Web Developer</em></h3>
+            <h3 class="hero__subtitle"><em>Web Developer</em></h3>
+            <div class="hero__tools__icons tools__icons">
+                <ul class="tools__icons__group">
+                    <li class="tools__icons__item">
+                        <i class="fab fa-css3-alt"></i>
+                        <p>CSS3</p>
+                    </li>
+                    <li class="tools__icons__item">
+                        <i class="fab fa-html5"></i>
+                        <p>HTML5</p>
+                    </li>
+                    <li class="tools__icons__item">
+                        <i class="fab fa-js"></i>
+                        <p>Javascript</p>
+                    </li>
+                    <li class="tools__icons__item">
+                        <i class="fab fa-node-js"></i>
+                        <p>Nodejs</p>
+                    </li>
+                    <li class="tools__icons__item">
+                        <i class="fas fa-database"></i>
+                        <p>MongoDB</p>
+                    </li>
+                    <li class="tools__icons__item">
+                        <i class="fab fa-react"></i>
+                        <p>Reactjs</p>
+                    </li>
+                </ul>
+            </div>
         </div>
 
     </section>
     <section class="about" id="about">
         <h2 class="about__title">About Me</h2>
         <div class="about__description">
-                <p class="about__p">I'm a really dedicated person who feels very comfortable with learning new things. I'm passionate for the IT world and
-                anything that has something to do with software and specially with coding.
-                <br><br>
-                I've started with HTML, CSS and JavaScript because they awesome and I needed a place to start from. But I gonna get my
-                hands dirty with IA and machine learning as soon as I can, because they the <s>future</s>  present
-                <br><br>
-                At the moment, junior full stack developer and builder. And very soon code builder.
-                <br><br>
-                Currently living in Brighton, UK and born in Madrid, Spain.</p>
-                <img src="./public/de-frente.jpg" alt="picture profile" class="about__description__image">
+            <div class="about__description__text">
+                <p class="about__p">At some point of my career I decided to make a change and start coding. Since then, (jun, 2020) I’ve been coding every
+                day, and discovering everything this world had to show me.<b> What I found couldn’t be better.</b>
+                </p>
+                <p class="about__p"><b>I started with HTML, CSS and JavaScript</b> because they're awesome and I needed a place to start from.
+                </p>
+                <p class="about__p">From there, I jumped to <b>react, node, mongoDB, git, ejs…</b> And currently I could say I’m ready to get into the IT world <b>to
+                start building outstandings and high quality apps.</b>
+                </p>
+                <p class="about__p">My goal is getting my hands dirty with AI and machine learning as soon as I can, because these technologies are awesome and the <s>future</s>  present
+                </p>
+                <p class="about__p">I have always taken a <b>deep interest in learning new things.</b> I'm passionate about the IT world and anything that has
+                something to do with software engineering and coding.
+                </p>
+                <p class="about__p">At the moment, junior full stack developer and builder. And very soon code builder.
+                </p>
+                <p class="about__p">Based in Brighton, UK and born in Madrid, Spain in 1992.</p>
             </div>
+                <img src="./public/de-frente.jpg" alt="picture profile" class="about__description__image">
+        </div>
 
     </section>
     <!-- <section class="services" id="services">
@@ -68,7 +106,7 @@
     </section> -->
     <section class="myWork" id="myWork">
             <div class="myWork__container">
-                <h2>My Work</h2>
+                <h2>Projects</h2>
                 <div class="myWork__group">
                     <div class="myWork__group__row">
                         <div class="myWork__item " id="left-column"  style="background-color: azure; color: black;">
@@ -77,29 +115,29 @@
                                 <img src="./public/bao-cover.png"  alt="cover">
                                 <!-- <div class="divider hidden"></div> -->
                                 <div class="myWork__item__description">
-                                        <div class="myWork__icons__square">
-                                            <ul class="myWork__icons__square__group">
-                                                <li class="myWork__icons__square__item">
+                                        <div class="tools__icons">
+                                            <ul class="tools__icons__group">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-css3-alt"></i>
                                                     <!-- <p>CSS3</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-html5"></i>
                                                     <!-- <p>HTML5</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-js"></i>
                                                     <!-- <p>Javascript</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-node-js"></i>
                                                     <!-- <p>Nodejs</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fas fa-database"></i>
                                                     <!-- <p>MongoDB</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-react"></i>
                                                     <!-- <p>Reactjs</p> -->
                                                 </li>
@@ -114,7 +152,7 @@
                                 <div class="divider"></div>
                                 <li class="myWork__item__more-info__item">
                                     <img src="public/bao-home.png" alt="home">
-                                    <h6>Once the picture is uploaded, the potential customer is able to find the author, the collection or the picture itself by using mongoDB fuzzy searching.I use react, metrial-ui and figma to style the whole webpage.</h6>
+                                    <h6>Once the picture is uploaded, the potential customer is able to find the author, the collection or the picture itself by using mongoDB fuzzy searching. <br>I used react, metrial-ui and figma to style the whole webpage.</h6>
                                 </li>
                                 <div class="divider"></div>
                                 <li class="myWork__item__more-info__item">
@@ -149,30 +187,30 @@
                                 <img src="./public/ENTERIUM-LOGO.png">
                                 <!-- <div class="divider hidden"></div> -->
                                 <div class="myWork__item__description">
-                                        <div class="myWork__icons__square">
-                                            <ul class="myWork__icons__square__group">
-                                                <li class="myWork__icons__square__item">
+                                        <div class="tools__icons">
+                                            <ul class="tools__icons__group">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-css3-alt"></i>
                                                     <!-- <p>CSS3</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-html5"></i>
                                                     <!-- <p>HTML5</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-js"></i>
                                                     <!-- <p>Javascript</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fab fa-node-js"></i>
                                                     <!-- <p>Nodejs</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
+                                                <li class="tools__icons__item">
                                                     <i class="fas fa-database"></i>
                                                     <!-- <p>MongoDB</p> -->
                                                 </li>
-                                                <li class="myWork__icons__square__item">
-                                                    <i class="fab fa-react"></i>
+                                                <li class="tools__icons__item" style="width: 17px; padding-inline: unset; margin-inline: 0 5px;">
+                                                    <i style="font-size: 1rem;"><%</i>
                                                     <!-- <p>Reactjs</p> -->
                                                 </li>
                                             </ul>
@@ -210,31 +248,19 @@
                                 <img src="./public/this-portfolio.svg">
                                 <!-- <div class="divider hidden"></div> -->
                                 <div class="myWork__item__description">
-                                    <div class="myWork__icons__square">
-                                        <ul class="myWork__icons__square__group">
-                                            <li class="myWork__icons__square__item">
+                                    <div class="tools__icons">
+                                        <ul class="tools__icons__group">
+                                            <li class="tools__icons__item">
                                                 <i class="fab fa-css3-alt"></i>
                                                 <!-- <p>CSS3</p> -->
                                             </li>
-                                            <li class="myWork__icons__square__item">
+                                            <li class="tools__icons__item">
                                                 <i class="fab fa-html5"></i>
                                                 <!-- <p>HTML5</p> -->
                                             </li>
-                                            <li class="myWork__icons__square__item">
+                                            <li class="tools__icons__item">
                                                 <i class="fab fa-js"></i>
                                                 <!-- <p>Javascript</p> -->
-                                            </li>
-                                            <li class="myWork__icons__square__item">
-                                                <i class="fab fa-node-js"></i>
-                                                <!-- <p>Nodejs</p> -->
-                                            </li>
-                                            <li class="myWork__icons__square__item">
-                                                <i class="fas fa-database"></i>
-                                                <!-- <p>MongoDB</p> -->
-                                            </li>
-                                            <li class="myWork__icons__square__item">
-                                                <i class="fab fa-react"></i>
-                                                <!-- <p>Reactjs</p> -->
                                             </li>
                                         </ul>
                                     </div><h6>Pure HTML, CSS and Javascript has being used to make this portfolio and deployed with netfly.</h6>
@@ -266,29 +292,21 @@
                             
                             <!-- <div class="divider hidden"></div> -->
                             <div class="myWork__item__description">
-                                <div class="myWork__icons__square">
-                                    <ul class="myWork__icons__square__group">
-                                        <li class="myWork__icons__square__item">
+                                <div class="tools__icons">
+                                    <ul class="tools__icons__group">
+                                        <li class="tools__icons__item">
                                             <i class="fab fa-css3-alt"></i>
                                             <!-- <p>CSS3</p> -->
                                         </li>
-                                        <li class="myWork__icons__square__item">
+                                        <li class="tools__icons__item">
                                             <i class="fab fa-html5"></i>
                                             <!-- <p>HTML5</p> -->
                                         </li>
-                                        <li class="myWork__icons__square__item">
+                                        <li class="tools__icons__item">
                                             <i class="fab fa-js"></i>
                                             <!-- <p>Javascript</p> -->
                                         </li>
-                                        <li class="myWork__icons__square__item">
-                                            <i class="fab fa-node-js"></i>
-                                            <!-- <p>Nodejs</p> -->
-                                        </li>
-                                        <li class="myWork__icons__square__item">
-                                            <i class="fas fa-database"></i>
-                                            <!-- <p>MongoDB</p> -->
-                                        </li>
-                                        <li class="myWork__icons__square__item">
+                                        <li class="tools__icons__item">
                                             <i class="fab fa-react"></i>
                                             <!-- <p>Reactjs</p> -->
                                         </li>
@@ -305,37 +323,26 @@
                             <h5>Drum kit</h5>
                             <img src="./public/drum.svg">
                             <div class="myWork__item__description">
-                                <div class="myWork__icons__square">
-                                    <ul class="myWork__icons__square__group">
-                                        <li class="myWork__icons__square__item">
+                                <div class="tools__icons">
+                                    <ul class="tools__icons__group">
+                                        <li class="tools__icons__item">
                                             <i class="fab fa-css3-alt"></i>
                                             <!-- <p>CSS3</p> -->
                                         </li>
-                                        <li class="myWork__icons__square__item">
+                                        <li class="tools__icons__item">
                                             <i class="fab fa-html5"></i>
                                             <!-- <p>HTML5</p> -->
                                         </li>
-                                        <li class="myWork__icons__square__item">
+                                        <li class="tools__icons__item">
                                             <i class="fab fa-js"></i>
                                             <!-- <p>Javascript</p> -->
                                         </li>
-                                        <li class="myWork__icons__square__item">
-                                            <i class="fab fa-node-js"></i>
-                                            <!-- <p>Nodejs</p> -->
-                                        </li>
-                                        <li class="myWork__icons__square__item">
-                                            <i class="fas fa-database"></i>
-                                            <!-- <p>MongoDB</p> -->
-                                        </li>
-                                        <li class="myWork__icons__square__item">
-                                            <i class="fab fa-react"></i>
-                                            <!-- <p>Reactjs</p> -->
-                                        </li>
+
                                     </ul>
                                 </div><h6>Simple web app using CSS, HTML and Javascript only, made througth the bootcamp course</h6>
                             </div>
                             <div class="myWork__item__buttons">
-                                <a href="https://codesandbox.io/s/drum-soundboard-ksmlf?file=/src/index.js target="_blank" class="myWork__item__code__button">SEE THE SANDBOX</a>
+                                <a href="https://codesandbox.io/s/drum-soundboard-ksmlf?file=/src/index.js" target="_blank" class="myWork__item__code__button">SEE THE SANDBOX</a>
                             </div>
                         </div>
                         <div class="myWork__item" id="rigth-column" ></div>
@@ -347,13 +354,13 @@
     <footer class="footer" id="footer">
         <ul class="footer__group">
             <li class="footer__item">
-                <a href="" class="footer__item-icon"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/GonzRodriguez" class="footer__item-icon" target="_blank"><i class="fab fa-github"></i></a>
             </li>
             <li class="footer__item">
-                <a href="" class="footer__item-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/developer-gonzalo-grg/" target="_blank" class="footer__item-icon"><i class="fab fa-linkedin-in"></i></a>
             </li>
             <li class="footer__item">
-                <a href="" class="footer__item-icon"><i class="fab fa-instagram" size="5"></i></a>
+                <a href="https://www.instagram.com/gonz_rgs/" target="_blank" class="footer__item-icon"><i class="fab fa-instagram" size="5"></i></a>
             </li>
         </ul>
         <h4><a href="mailto:grgsalamanca@gmail.com" class="footer__email">grgsalamanca@gmail.com</a></h4>
