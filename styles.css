@@ -28,7 +28,7 @@
     --fs-h1: 3.7rem;
     --fs-h2: 3rem;
     --fs-h3: 1.75rem;
-    --fs-h4: 1rem;
+    --fs-h4: 0.8rem;
     /*font weight  */
     --fw-reg: 300;
     --fw-med: 500;
@@ -49,7 +49,7 @@
         --fs-h1: 5.5rem;
         --fs-h2: 4rem;
         --fs-h3: 2.5rem;
-        --fs-h4: 1.2rem;
+        --fs-h4: 1rem;
         --fs-body: 1.125rem;
     }
 
@@ -552,10 +552,16 @@ header img{
         flex: 1;
         margin: 1rem ;
     }
-    .about__description__image{
-        margin: auto;
-        /* order: -1; */
+    .about__description__image img{
+        width: 100%;
     }
+    .about__description__image{
+    display: flex;
+    justify-content: flex-end;
+    min-width: 200px;
+    border-radius: 3px;
+    width: 100%;
+}
 }
 
 /* Medium */
@@ -578,10 +584,19 @@ header img{
         margin: 1rem ;
         flex-wrap: wrap;
     }
-    .about__description {
-        flex-wrap: wrap;
-    }
 
+    .about__description__image img{
+        width: 80%;
+    }
+    .about__description__image{
+        display: flex;
+        justify-content: flex-end;
+        min-width: 200px;
+        border-radius: 3px;
+        width: 100%;
+        transform: translate(1rem, -2rem);
+        z-index: -1;
+    }
 }
 
 /* large */
@@ -590,7 +605,9 @@ header img{
     .about {
         height: 70vh;
         margin-top: 20vh;
-        
+    }
+    .about__description__text {
+        margin-inline-end: 10rem;
     }
 
     .about__description {
@@ -601,8 +618,11 @@ header img{
         flex: 1;
         margin: 0 1rem 1rem 3rem;
     }
-}
+    .about__description__image{
+    transform: translate(1rem, -6rem);
+    }
 
+}
 /* Extra Large */
 
 @media screen and (min-width: 1000px)  {
@@ -627,18 +647,14 @@ header img{
 .about__description {
     display: flex;
     align-items: end;
+    flex-wrap: wrap;
 }
-.about__description p {
+.about__description__text h4 {
     font-family: 'Merriweather', serif;
+    margin-bottom: .5rem;
 }
 
-.about__description__image{
-    flex: 1;
-    min-width: 200px;
-    max-width: 20vw;
-    border-radius: 3px;
-    filter: drop-shadow(0px 0px 5px black);
-}
+
 
 
 
@@ -987,10 +1003,10 @@ footer {
     flex-direction: column;
 }
 
-footer h4 {
+footer h5 {
     z-index: 2;
 }
-footer h4:hover {
+footer h5:hover {
     z-index: 2;
     color: var(--clr-sec)
 
