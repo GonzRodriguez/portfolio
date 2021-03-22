@@ -357,7 +357,7 @@ header img{
 
 @media screen and (min-width: 450px) {
     .hero__img {
-        height: 45vh;
+        height: 29rem;
 
     }
     .hero__text {
@@ -388,7 +388,7 @@ header img{
 
 @media screen and (min-width: 845px)  { 
      .hero__img {
-        height: 45vw;
+        height: 32rem;
     }
     .hero {
         height: 100vh;
@@ -415,7 +415,7 @@ header img{
 
 @media screen and (min-width: 1000px)  {
     .hero__img {
-        height: 40vw;
+        height: 40rem;
     }
     .hero {
         height: 100vh;
