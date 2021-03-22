@@ -70,8 +70,7 @@ body {
     scroll-behavior: smooth;
     overflow-x:hidden;
 }
-body {
-}
+
 header {
     position: relative;
     display: flex;
@@ -163,8 +162,8 @@ header img{
 
 .divider {
     height: 1px;
-    width: 90%;
-    background-color: var(--bg-med);
+    width: 25%;
+    background-color: #2222225c;
     padding: 0;
     margin: auto;
 }
@@ -711,7 +710,7 @@ header img{
         flex: 0 0 100%;
         min-width: fit-content;
         flex-direction: column;
-        padding: 1rem;
+        padding: 5rem 2rem;
         flex-wrap: nowrap;
 } 
     .myWork__item__description {
@@ -726,7 +725,7 @@ header img{
     flex-direction: column;
     display: flex;
     height: max-content;
-    margin-block: 2rem;
+    /* margin-block: 2rem; */
     text-align: start;
 }
 }
