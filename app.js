@@ -1,8 +1,3 @@
-// $(document).ready(function () {
-//     $(".hamburguer").click(function () {
-//         $(this).toggleClass("on");
-//     });
-// });
 
 const hamburguer = document.querySelector(".hamburguer");
 const drawerMenuBg = document.querySelector(".drawer__bg");
@@ -33,18 +28,6 @@ function closeButton(){
     cross.appendChild(crossStripe2)
     return cross
 }
-function inViewport(element) {
-    let bounds = element.getBoundingClientRect();
-    let viewWidth = document.documentElement.clientWidth;
-    let viewHeight = document.documentElement.clientHeight;
-
-    if (bounds['left'] < 0) return false;
-    if (bounds['top'] < 0) return false;
-    if (bounds['right'] > viewWidth) return false;
-    if (bounds['bottom'] > viewHeight) return false;
-
-    return true;
-}
 
 function hamburguerToggle(){
     hamburguer.classList.toggle("on");
@@ -52,11 +35,11 @@ function hamburguerToggle(){
     drawerMenuBg.classList.toggle("open");
     drawerMenu.classList.toggle("open")
     hamburguer.classList.toggle("floatMenu")
+    // document.querySelector("html").style.overflow = "hidden";
     if (hamburguer.classList.value.includes("on")) {
         hamburguer.classList.remove("floatMenu")
     }
     window.scrollY == 0 && hamburguer.classList.remove("floatMenu") 
-    
 }
 hamburguer.addEventListener("click", () => {
     hamburguerToggle()
