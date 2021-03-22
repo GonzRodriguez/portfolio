@@ -33,7 +33,18 @@ function closeButton(){
     cross.appendChild(crossStripe2)
     return cross
 }
+function inViewport(element) {
+    let bounds = element.getBoundingClientRect();
+    let viewWidth = document.documentElement.clientWidth;
+    let viewHeight = document.documentElement.clientHeight;
 
+    if (bounds['left'] < 0) return false;
+    if (bounds['top'] < 0) return false;
+    if (bounds['right'] > viewWidth) return false;
+    if (bounds['bottom'] > viewHeight) return false;
+
+    return true;
+}
 
 function hamburguerToggle(){
     hamburguer.classList.toggle("on");
