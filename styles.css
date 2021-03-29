@@ -79,7 +79,7 @@ header {
     background-color: var(--clr-pri-dark);
     width: 100%;
     height: 10vh;
-    /* overflow-x: hidden; */
+    min-height: 60px;
 }
 section {
     overflow-x: hidden;
@@ -157,7 +157,6 @@ header img{
     width: 40px;
     position: absolute;
     top: 25%;
-    left: 50%;
 }
 
 .divider {
@@ -194,13 +193,29 @@ header img{
 }
 
 /* --------- HAMBURGUER MENU --------- */
+@media screen and (max-width: 450px)  { 
+    .hamburguer {
+        margin: 0
+    }
+    header img {
+        left: 45%;
+    }
+
+}
+@media screen and (min-width: 450px) {
+        .hamburguer {
+        margin: 20px
+    }
+        header img {
+        left: 50%;
+    }
+}
 
 .hamburguer {
     cursor: pointer;
     z-index: 5;
     height: 50px;
     width: 50px;
-    margin: 20px;
     transition: all .2s ease-out;
     display: flex;
     justify-content: center;
@@ -324,6 +339,7 @@ header img{
         top: 17%;
         left: 40%;
         transform: translate(-50%, -50%);
+        margin: 2.5rem 1.5rem;
     }
     .hero__text {
         border-top: solid;
@@ -358,7 +374,7 @@ header img{
 @media screen and (min-width: 450px) {
     .hero__img {
         height: 29rem;
-
+        margin: 7vh;
     }
     .hero__text {
         /* border: solid; */
@@ -498,8 +514,6 @@ header img{
     z-index: 2;
     position: absolute;
     border-radius:50%;
-    margin: 7vh;
-
 }
 
 .hero__img img{
