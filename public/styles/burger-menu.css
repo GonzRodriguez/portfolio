@@ -1,0 +1,65 @@
+@media screen and (max-width: 450px)  { 
+    .burger {
+        margin: 0
+    }
+    header img {
+        left: 45%;
+    }
+
+}
+@media screen and (min-width: 450px) {
+        .burger {
+        margin: 20px
+    }
+        header img {
+        left: 50%;
+    }
+}
+
+.burger {
+    cursor: pointer;
+    z-index: 5;
+    height: 50px;
+    width: 50px;
+    transition: all .2s ease-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.burger .burger__stripe {
+    width:70%;
+    height: 4px;
+    background: white;
+    margin: 2px auto;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+
+.burger.on {
+    position: fixed;
+    transform: translateY(8px);
+}
+.burger.on .burger__stripe__top {
+  transform: rotate(45deg) translate(2px, 1px);
+}
+
+.burger.on .burger__stripe__middle {
+  opacity: 0;
+}
+
+.burger.on .burger__stripe__bottom {
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.burger.floatMenu {
+    z-index: 4;
+    padding: 4px;
+    position: fixed;
+    background-color: var(--clr-pri-dark);
+    transform: translateY(2vw);
+    border-radius: 30%;
+    height: 50px;
+    width: 50px;
+}

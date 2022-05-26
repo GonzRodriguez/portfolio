@@ -1,0 +1,122 @@
+
+/* Mobile */
+
+@media screen and (max-width: 450px)  {  
+    .about {
+        height: 75vh;
+        padding: 4rem 0;
+    }
+    .about__title {
+        padding: 0 3rem;
+        text-align: center;
+    }
+    .about__description {
+        flex-wrap: wrap;
+        margin: 0 2rem;
+    }
+    .about__description p {
+        flex: 1;
+        margin: 1rem ;
+    }
+    .about__description__image img{
+        width: 100%;
+    }
+    .about__description__image{
+    display: flex;
+    justify-content: flex-end;
+    min-width: 200px;
+    border-radius: 3px;
+    width: 100%;
+}
+}
+
+/* Medium */
+
+@media screen and (min-width: 450px) { 
+    .about {
+        height: 55vh;
+        padding: 3rem 5rem;
+    }
+
+
+    .about__title {
+        margin: 0 1rem;
+        text-align: end;
+
+    }
+    .about__description p {
+        flex: 1;
+        margin: 1rem ;
+        flex-wrap: wrap;
+    }
+
+    .about__description__image img{
+        width: 80%;
+    }
+    .about__description__image{
+        display: flex;
+        justify-content: flex-end;
+        min-width: 200px;
+        border-radius: 3px;
+        width: 100%;
+        transform: translate(1rem, -2rem);
+        z-index: -1;
+    }
+}
+
+/* large */
+
+@media screen and (min-width: 845px)  {
+    .about {
+        height: 70vh;
+    }
+    .about__description__text {
+        margin-inline-end: 10rem;
+    }
+
+    .about__description {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }    
+    .about__description p {
+        flex: 1;
+        margin: 0 1rem 1rem 3rem;
+    }
+    .about__description__image{
+    transform: translate(1rem, -6rem);
+    }
+
+}
+/* Extra Large */
+
+@media screen and (min-width: 1000px)  {
+
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: var(--bg-med);
+    height: fit-content;
+    height: -moz-fit-content;
+    flex-direction: column;
+    filter: drop-shadow(0px 0px 5px black);
+}
+.about__title {
+    width: 100%;
+    margin: 2rem;
+}
+
+.about__description {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+}
+.about__description__text h4 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: .5rem;
+}
+
+
+

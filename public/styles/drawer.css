@@ -1,0 +1,69 @@
+
+.drawer__menu{
+    font-size: var(--fs-h2);
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    margin: 0;
+    visibility: hidden;
+    display: flex;
+    flex-flow: column;
+    width: inherit;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.drawer__menu.open{
+    overflow: hidden;
+    visibility: visible;
+}
+.drawer__layout {
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+.drawer__bg {
+    height:100%;
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    opacity: 50%;
+    display: none;
+}
+.drawer__bg.open {
+    display: block;
+    overflow: hidden;
+}
+
+.drawer__list {
+    display: none;
+    position: fixed;
+    display: block;
+    height: 75%;
+    padding-left: 4rem;
+    width: inherit;
+    visibility: hidden;
+    top: -75vw;
+    right: 0;
+    background-color: var(--clr-pri-dark);
+    transition: all .2s cubic-bezier(0.65, 0.05, 0.36, 1); 
+}
+.drawer__list.open{
+    visibility: visible;
+    right: 0;
+    top: 0;
+    transition: all .2s cubic-bezier(0.65, 0.05, 0.36, 1); 
+}
+.drawer__list li:first-child {
+    margin-top: 8vh;
+}
+.drawer__list li {
+    margin: 5px 0; 
+}
+
+.drawer__list li:hover {
+    color: var(--clr-sec);
+}

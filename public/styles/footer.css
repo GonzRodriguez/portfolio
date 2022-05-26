@@ -1,0 +1,150 @@
+
+@media screen and (max-width: 450px)  {  
+
+
+}
+
+/* Medium */
+
+@media screen and (min-width: 450px) { 
+ 
+}
+
+/* large */
+
+@media screen and (min-width: 845px)  {
+   
+
+}
+
+/* Extra Large */
+
+@media screen and (min-width: 1000px)  {
+
+}
+
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    flex-direction: column;
+}
+
+footer h5 {
+    z-index: 2;
+}
+footer h5:hover {
+    z-index: 2;
+    color: var(--clr-sec)
+
+}
+ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
+}
+.footer__group {
+    z-index: 4;
+    display: flex;
+    padding-inline-start: 0;
+    flex-direction: row;
+}
+.footer__email {
+    display: inline;
+    margin: auto;
+    text-shadow: 1px 1px var(--clr-pri-light);
+}
+
+.footer__item {
+    margin: 2rem;
+    font-size: 3em;
+}
+
+.footer__item:hover {
+    color: var(--clr-sec)
+}
+
+.polygone__circle-lg {
+    z-index: 0;
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    bottom: -5rem;
+    left: -3rem;
+    background-color: var(--bg-light);
+    clip-path: circle(50% at 50% 50%);
+    animation: circle-lg 140s infinite 2s;
+}
+
+.polygone__circle-md{
+    z-index: -1;
+    height: 9rem;
+    width: 9rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 10rem;
+    background-color: var(--clr-pri-light);
+    clip-path: circle(50% at 50% 50%);
+    animation: circle-md 90s infinite;
+}
+
+.polygone__circle-sm {
+    z-index: 1;
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    bottom: 9rem;
+    left: 10rem;
+    background-color: var(--clr-sec);
+    clip-path: circle(50% at 50% 50%);
+    animation: circle-sm 100s infinite;
+
+}
+
+@keyframes circle-sm {
+    0%   {top: 5rem;}
+    15%   {top: 6rem; left: 5rem;}
+    25%  {top: 10rem; left: 8rem;}
+    45%  {top: 12rem; left: 13rem;}
+    60%  {top: 11rem; left: 4rem;}
+    75%  {top: 8rem; left: 2rem;}
+    100% {top: 5rem;}
+}
+@keyframes circle-lg {
+    0%   {bottom: -5rem;}
+    25%  {bottom: -3rem; left: 1rem;}
+    50%  {bottom: 0rem; left: 0rem;}
+    75%  {bottom: -2rem; left: -1rem;}
+    100% {bottom: -5rem;}
+}
+
+@keyframes circle-md {
+    0% {bottom: -3rem; left: 10rem;}
+    50% {bottom: 5rem; left: 10rem;}
+    100% {bottom: -3rem; left: 10rem;}
+}
+
+.footer::after {
+    content: "";
+    width: 100vw;
+    height: 10rem;
+    position: absolute;
+    bottom: -5rem;
+    background: rgb(48,43,99);
+    background: linear-gradient(56deg, rgba(48,43,99,1) 58%, rgba(38,65,99,1) 100%);
+    clip-path: polygon(100% 0%,100% 0%,100% 100%,0% 100%, 0 60% );
+}
+.copyright {
+    position: absolute;
+    display: flex;
+    z-index: 3;
+    bottom: -3rem;
+    right: 2rem;
+} 

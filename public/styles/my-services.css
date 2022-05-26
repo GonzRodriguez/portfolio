@@ -1,0 +1,28 @@
+
+/* Mobile */
+
+@media screen and (max-width: 636px)  {  
+
+}
+
+/* Medium */
+
+@media screen and (min-width: 636px) { 
+
+}
+
+/* large */
+
+@media screen and (min-width: 845px)  {
+   
+
+}
+
+/* Extra Large */
+
+@media screen and (min-width: 1100px)  {
+    .services {
+        height: 45vh;
+    }
+}
+
