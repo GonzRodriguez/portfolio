@@ -26,7 +26,7 @@ class MyWork extends HTMLElement {
       <div class="myWork__item" id="left-column"  style="background-color: azure; color: black ;padding:0 3rem 3rem ;">
         <div class="myWork__item__cover">
           <h5>Bao Gallery </h5>
-          <img loading="lazy" src="./assets/bao-cover.png"  alt="cover">
+          <img loading="lazy" src="public/assets/bao-cover.png"  alt="cover">
           <!-- <div class="divider hidden"></div> -->
           <div class="myWork__item__description">
                   <div class="tools__icons">
@@ -65,24 +65,24 @@ class MyWork extends HTMLElement {
           <ul class="myWork__item__more-info__group hidden">
               <div class="divider"></div>
               <li class="myWork__item__more-info__item">
-                  <img loading="lazy" src="./assets/bao-home.png" alt="home">
+                  <img loading="lazy" src="public/assets/bao-home.png" alt="home">
                   <h6>Once the picture is uploaded, the potential customer is able to find the author, the collection or the picture itself by using mongoDB fuzzy searching. <br>I used react, metrial-ui and figma to style the whole webpage.</h6>
               </li>
               <div class="divider"></div>
               <li class="myWork__item__more-info__item">
-                  <img loading="lazy" src="./assets/bao-login.png" alt="login">
+                  <img loading="lazy" src="public/assets/bao-login.png" alt="login">
                   <h6>Users authentication is done with JWT. I store an access token un the database and send refresh token to client in order to get verify every 10 minutes and generate a new acces token.</h6>
 
               </li>
               <div class="divider"></div>
               <li class="myWork__item__more-info__item">
-                  <img loading="lazy" src="./assets/bao-dashboard.png" alt="dashboard">
+                  <img loading="lazy" src="public/assets/bao-dashboard.png" alt="dashboard">
                   <h6>Un finished dashboard where the vendor is able to manage his or her account. Update personal details, manage stripe accounts, see statistics and more.</h6>
               
               </li>
               <div class="divider"></div>
               <li class="myWork__item__more-info__item">
-                  <img loading="lazy" src="./assets/bao-uplaod.png" alt="upload">
+                  <img loading="lazy" src="public/assets/bao-uplaod.png" alt="upload">
                   <h6>I use nodejs in the backend to handle all the uploads and store the photographs in the server using different npm packages.</h6>
               
               </li>
@@ -98,7 +98,7 @@ class MyWork extends HTMLElement {
             <a href="https://enterium.myWorkkuapp.com/" target="_blank">
             <h5>Enterium </h5>
             </a>
-            <img loading="lazy" src="./assets/ENTERIUM-LOGO.png">
+            <img loading="lazy" src="public/assets/ENTERIUM-LOGO.png">
             <!-- <div class="divider hidden"></div> -->
             <div class="myWork__item__description">
                     <div class="tools__icons">
@@ -136,13 +136,13 @@ class MyWork extends HTMLElement {
         <ul class="myWork__item__more-info__group hidden">
             <div class="divider"></div>
             <li class="myWork__item__more-info__item">
-                <img loading="lazy" src="./assets/enterium-create-post.png" alt="compose">
+                <img loading="lazy" src="public/assets/enterium-create-post.png" alt="compose">
                 <h6>Create a post and save it in the database. All the post will be shown in the home and profile page using
                     ejs.</h6>
             </li>
             <div class="divider"></div>
             <li class="myWork__item__more-info__item">
-                <img loading="lazy" src="./assets/enterium-profile.png" alt="profile">
+                <img loading="lazy" src="public/assets/enterium-profile.png" alt="profile">
                 <h6>Once the user is authenticated with passport, will be redirected to the profile page. In this page the
                     user will be able to create, update and delete post and see his/her last posts.</h6>
             </li>
@@ -157,7 +157,7 @@ class MyWork extends HTMLElement {
     <div class="myWork__item" id="left-column" style="background-color: var(--clr-pri-light );padding:0 3rem 3rem ;color: white;">
         <div class="myWork__item__cover">
             <h5>This Portfolio</h5>
-            <img loading="lazy" src="./assets/this-portfolio.jpg">
+            <img loading="lazy" src="public/assets/this-portfolio.jpg">
             <div class="myWork__item__description">
                 <div class="tools__icons">
                     <ul class="tools__icons__group">
@@ -183,7 +183,7 @@ class MyWork extends HTMLElement {
     </div>  
       <div class="myWork__item" id="right-column" style="background-color: white; color: black; padding:0 3rem 3rem" >
           <h5>Reactive notes </h5>
-          <img loading="lazy" src="./assets/Reactive Notes.png">          
+          <img loading="lazy" src="public/assets/Reactive Notes.png">          
           <div class="myWork__item__description">
               <div class="tools__icons">
                   <ul class="tools__icons__group">
@@ -212,7 +212,7 @@ class MyWork extends HTMLElement {
       </div>
       <div class="myWork__item" id="left-column" style="background-color: var(--clr-pri); padding:0 3rem 3rem ;" >
           <h5>Drum kit</h5>
-          <img loading="lazy" src="./assets/drum.svg">
+          <img loading="lazy" src="public/assets/drum.svg">
           <div class="myWork__item__description">
               <div class="tools__icons">
                   <ul class="tools__icons__group">

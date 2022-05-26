@@ -42,7 +42,7 @@ class About extends HTMLElement {
                 <h4 class="about__p">Based in Brighton, UK and born in Madrid, Spain in 1992.</h4>
             </div>
             <div class="about__description__image">
-                <img src="./assets/secondimg.png" alt="picture profile" >
+                <img src="public/assets/secondimg.png" alt="picture profile" >
             </div>
         </div>
       </section>
