@@ -35,7 +35,7 @@
 @media screen and (min-width: 450px) { 
     .about {
         height: 55vh;
-        padding: 3rem 5rem;
+        padding: 3rem 10rem;
     }
 
 
@@ -68,7 +68,7 @@
 
 @media screen and (min-width: 845px)  {
     .about {
-        height: 70vh;
+        padding: 3rem 13rem;
     }
     .about__description__text {
         margin-inline-end: 10rem;
@@ -90,7 +90,9 @@
 /* Extra Large */
 
 @media screen and (min-width: 1000px)  {
-
+    .about {
+        padding: 3rem 18rem;
+    }
 }
 
 .about {
