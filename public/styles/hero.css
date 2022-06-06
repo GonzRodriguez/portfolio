@@ -16,7 +16,7 @@
         width: 100vw;
     }
 
-    .hero {
+    /* .hero {
         margin: 0px 0px;
         flex-direction: column;
         align-items: center;
@@ -27,7 +27,7 @@
         content: "";
         height: 170vh;
         clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 72%);
-    }
+    } */
     .hero__circle-lg {
         display: none;
     }
@@ -53,7 +53,7 @@
         top: calc(100% - 50vh);
 
         }
-    .hero {
+    /* .hero {
         flex-direction: column;
         align-items: center;
     }
@@ -61,7 +61,7 @@
         content: "";
         height: 150vh;
         clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 73%);
-    }
+    } */
     .hero__circle-lg {
     display: none;
     }
@@ -82,15 +82,15 @@
      .hero__img {
         height: 32rem;
     }
-    .hero {
+    /* .hero {
         flex-direction: row;
         align-items: center;
-    }
-    .hero::after {
+    } */
+    /* .hero::after {
         content: "";
         height: 120vh;
         clip-path: polygon(100% 37%, 100% 0%, 100% 100%, 0px 100%, 0px 80%);
-    }
+    } */
     .hero__text {
         top: calc(74% - 46vh);
 
@@ -108,10 +108,10 @@
     .hero__img {
         height: 40rem;
     }
-    .hero {
+    /* .hero {
         flex-direction: row;
         align-items: center;
-    }
+    } */
     .hero__circle-lg {
         transform: translate(-90vh, -11vh);
 
@@ -148,14 +148,14 @@
 
 .hero {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(784px, 1fr));
     align-content: center;
     justify-content: center;
     align-items: center;
     justify-items: center;
 }
-.hero::before {
-    content: "";
+/* .hero::before { 
+    /* content: "";
     position: absolute;
     z-index: 0;
     height: 100vh;
@@ -167,8 +167,8 @@
 
 }
 .hero::after {
-    content: "";
-    /* height: 120vh; */
+    content: ""; 
+    height: 120vh; 
     top: 0;
     position: absolute;
     right: 0;
@@ -177,7 +177,7 @@
     background: rgb(72,52,224);
     background: linear-gradient(357deg, var(--clr-pri) -89%, var(--clr-pri-dark) 103%);
 
-}
+} */
 
 .hero__name {
     font-family: 'Oswald', sans-serif;

@@ -13,7 +13,6 @@ class HeroMenu extends HTMLElement {
       const styles = document.createElement("link");
       styles.rel = "stylesheet";
       styles.href = "../../public/styles/hero.css";
-
       // get attribute values from getters
 
       // adding a class to our container for the sake of clarity
@@ -21,6 +20,7 @@ class HeroMenu extends HTMLElement {
 
       // creating the inner HTML of the editable list element
       hero.innerHTML = `
+      <script src="./src/app.js" defer></script>
     <header class="hero" id="home">
         <div class="hero__circle-lg"></div>
         <div class="hero__img">

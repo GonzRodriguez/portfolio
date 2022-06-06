@@ -16,6 +16,14 @@
     }
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    min-width: 100vw;
+}
 .burger {
     cursor: pointer;
     z-index: 5;
@@ -38,7 +46,6 @@
 }
 
 .burger.on {
-    position: fixed;
     transform: translateY(8px);
 }
 .burger.on .burger__stripe__top {

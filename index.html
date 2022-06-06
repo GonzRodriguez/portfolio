@@ -17,9 +17,10 @@
     <noscript><link rel="stylesheet" href="public/styles/styles.css"></noscript>
     <link rel="preload" href="public/styles/hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="public/styles/styles.css"></noscript>
-    <script src="src/app.js" defer></script>
+    <!-- <script src="src/app.js" defer></script> -->
     <script src="src/components/Drawer.js" defer ></script>
     <script src="src/components/Header.js" defer ></script>
+    <script src="src/components/BurgerMenu.js" defer ></script>
     <script src="src/components/Hero.js" defer ></script>
     <script src="src/components/About.js" defer ></script>
     <script src="src/components/My-work.js" defer ></script>
@@ -32,9 +33,7 @@
     <title>GonzRodriguez Portfolio Website</title>
 </head>
 <body>
-    <!-- <div class="zoomedImg"></div> -->
-    <drawer-component></drawer-component>
-    <burger-menu></burger-menu>
+    <header-component > </header-component>
     <section class="hero">
         <div class="hero__circle-lg"></div>
         <div class="hero__img">
@@ -74,10 +73,10 @@
           </div>
         </div>
     </section>
-    <about-component></about-component>
+    <about-component id="about"></about-component>
         <section id="myWork">
             <my-work-component class="myWork"></my-work-component>
         </section>
-    <footer-component></footer-component>
+    <footer-component id="footer"></footer-component>
 </body>
 </html>
